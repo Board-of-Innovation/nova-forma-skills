@@ -114,10 +114,6 @@ RULE_FILES = (
 REVIEWED_ALLOW = (
     (
         "skills/nova-forma-outcome-statement-writer/references/examples.md",
-        "Nothing confidential crosses opportunities.",
-    ),
-    (
-        "skills/nova-forma-outcome-statement-writer/references/examples.md",
         "No other client's confidential data in any draft",
     ),
 )
