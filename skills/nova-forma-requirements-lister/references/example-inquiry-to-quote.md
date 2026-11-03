@@ -4,7 +4,7 @@ Figures are illustrative. To keep it short, the example leaves out the tracker a
 
 **Summary:** 15 requirements. Reading the request, building the price, and sending and logging carry the most.
 
-[Visual: a heat map titled "Reading, pricing and sending carry most requirements". Rows: Know, Decide, Produce, Do, Check. Columns: the six steps of the scope card's swimlane, from read the request to send and log. Cells shaded by count; the heaviest cells in read the request, build the price, and send and log in the accent.]
+[Visual: a heat map titled "Reading, pricing and sending carry most requirements". Rows: Know, Decide, Produce, Do, Check. Columns: the six steps of the scope card's swimlane, from read the request to send and log. Cells shaded by count; the columns of read the request, build the price, and send and log in the accent.]
 
 | Requirement | By whom | Step |
 | --- | --- | --- |
