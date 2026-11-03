@@ -18,6 +18,50 @@ import sys
 
 LOW, HIGH = 0, 1
 
+# Every field the script reads, by section, so a misspelled field stops the script
+# instead of quietly taking its default.
+FIELDS = {
+    "": {
+        "workflow",
+        "currency",
+        "baseline",
+        "addressable_share",
+        "capacity_split",
+        "fte_savings",
+        "put_to_use",
+        "impact_levers",
+        "value_creation",
+        "costs",
+        "reference_spend",
+        "finance",
+        "company",
+    },
+    "baseline": {
+        "hours_per_year",
+        "working_hours_per_fte",
+        "loaded_cost_per_fte",
+        "team_fte",
+        "freed_hours_per_year",
+    },
+    "capacity_split": {"put_to_use", "fte_savings", "quality"},
+    "fte_savings": {"realization"},
+    "put_to_use": {
+        "unit_name",
+        "won_unit_name",
+        "hours_per_unit",
+        "volume_today",
+        "demand_cap_units",
+        "demand_and_delivery_confirmed",
+        "conversion",
+        "value_per_unit",
+        "contribution_margin",
+    },
+    "costs": {"one_off", "yearly"},
+    "finance": {"discount_rate", "years"},
+    "company": {"revenue", "ebit"},
+}
+ENTRY_FIELDS = {"name", "value", "low", "high", "break_even"}
+
 
 class InputError(Exception):
     """A problem in the input file, reported to the user as one plain line."""
@@ -71,12 +115,23 @@ class Reader:
         return (high, low) if inverse else (low, high)
 
 
+def known(value, path, allowed):
+    """Stop on a field the script does not read, such as a misspelled one."""
+    unknown = sorted(set(value) - allowed)
+    if unknown:
+        where = path or "The input"
+        raise InputError(
+            f"{where} has an unknown field {unknown[0]}. Use one of: {', '.join(sorted(allowed))}."
+        )
+
+
 def section(data, key):
     value = data.get(key)
     if value is None:
         return None
     if not isinstance(value, dict):
         raise InputError(f"{key} must be an object with named fields, as in levers.md.")
+    known(value, key, FIELDS[key])
     return value
 
 
@@ -97,6 +152,7 @@ def entries(rd, data, key):
         path = f"{key}[{n}]"
         if not isinstance(item, dict) or not isinstance(item.get("name"), str):
             raise InputError(f"{path} needs a name, and a value or a low and a high.")
+        known(item, path, ENTRY_FIELDS)
         if "value" in item:
             spec = item["value"]
         else:
@@ -111,6 +167,7 @@ def read_inputs(data):
     """Check the whole input up front and return every number as a pair."""
     if not isinstance(data, dict):
         raise InputError("The input must be a JSON object, like the sample in levers.md.")
+    known(data, "", FIELDS[""])
     rd = Reader()
     p = {"workflow": text(data, "workflow", "workflow"), "currency": text(data, "currency", "EUR")}
 
@@ -243,6 +300,15 @@ def months(spend, yearly):
     return "1 month" if round(m) == 1 else f"{m:.0f} months"
 
 
+def lowest_positive(pair):
+    """The lowest figure above 0 in a pair, so a range of revenue or EBIT is tested at its
+    weaker side in both cases."""
+    if pair is None:
+        return None
+    above = [x for x in pair if x > 0]
+    return min(above) if above else None
+
+
 def compute(p, k):
     """Work out one case: k is LOW or HIGH."""
 
@@ -346,9 +412,9 @@ def compute(p, k):
     sources += [(f"business impact: {name}", v) for name, v in r["impact"]]
     sources += [(f"value creation: {name}", v) for name, v, _ in r["creation"]]
     biggest = max(sources, key=lambda item: item[1])[0]
-    revenue, ebit = at(p["revenue"]), at(p["ebit"])
+    revenue, ebit = lowest_positive(p["revenue"]), lowest_positive(p["ebit"])
     r["share_of_revenue"] = r["value"] / revenue if revenue else None
-    r["share_of_ebit"] = r["value"] / ebit if ebit is not None and ebit > 0 else None
+    r["share_of_ebit"] = r["value"] / ebit if ebit else None
     if r["share_of_revenue"] is not None and r["share_of_revenue"] > 0.01:
         flags.append(
             "This case is above 1% of revenue. Keep it, say so, and check the biggest "
@@ -368,6 +434,12 @@ def compute(p, k):
         flags.append(
             "Payback this short needs checking: under six months against the rough cost. "
             "Check the biggest guess first."
+        )
+    if r["net"] <= 0:
+        flags.append(
+            "The yearly running cost is at or above the value a year, so the case does not pay back."
+            if r["yearly_cost"] > 0
+            else "The case has no value a year yet, so there is nothing to pay back."
         )
     r["flags"] = flags
     return r
@@ -394,6 +466,10 @@ def report(p):
 
     def m(v, mode="nearest"):
         return f"{cur} {num(v, mode)}"
+
+    def ceiling(v):
+        """A spending ceiling, or "none" when the case loses money every year."""
+        return m(v, "down") if v > 0 else "none"
 
     use = p["use"] or {}
     unit = use.get("unit", "units")
@@ -441,15 +517,13 @@ def report(p):
             f"| Payback on the one-off cost | {months(lo['one_off'], lo['net'])} "
             f"| {months(hi['one_off'], hi['net'])} |"
         )
-    print(f"| Year-one spending ceiling | {m(lo['net'], 'down')} | {m(hi['net'], 'down')} |")
-    npv_label = "One-off spend at which NPV is zero" + (
-        "" if has_costs else ", before running costs"
-    )
+    before = "" if has_costs else ", before running costs"
+    print(f"| Year-one spending ceiling{before} | {ceiling(lo['net'])} | {ceiling(hi['net'])} |")
     years = per_case(f"{lo['years']:g} years", f"{hi['years']:g} years")
     rate = per_case(f"{lo['rate']:.0%}", f"{hi['rate']:.0%}")
     print(
-        f"| {npv_label} ({years}, {rate}) | {m(lo['npv_ceiling'], 'down')} "
-        f"| {m(hi['npv_ceiling'], 'down')} |"
+        f"| One-off spend at which NPV is zero{before} ({years}, {rate}) "
+        f"| {ceiling(lo['npv_ceiling'])} | {ceiling(hi['npv_ceiling'])} |"
     )
     if lo["spend"] is not None:
         s = per_case(m(lo["spend"]), m(hi["spend"]))
@@ -504,7 +578,7 @@ def not_checked(p):
                 "extra units against real demand, such as requests declined today "
                 "(needs put_to_use.demand_cap_units)"
             )
-        if use["volume"] is None:
+        if use["volume"] is None and not use["confirmed"]:
             missing.append(
                 "extra units against 25% of today's volume (needs put_to_use.volume_today)"
             )

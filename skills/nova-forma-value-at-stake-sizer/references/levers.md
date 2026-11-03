@@ -40,7 +40,7 @@ New units or customers × price × contribution margin, for an offer the redesig
 
 ## Checks on the size of the case
 
-Run all four, and name any failure in plain words. The script runs each one when it has the inputs that check needs, and prints a "Not checked" line for each one it could not run. Run that check by hand, or ask the user for the missing input.
+Run all four, and name any failure in plain words. The script runs each one when it has the inputs that check needs, and prints a "Not checked" line for each one it could not run. Run that check by hand, or ask the user for the missing input. For the payback check without a cost, report the year-one spending ceiling instead, and never invent a cost or a `reference_spend`.
 
 - Extra units above 25% of today's volume: cap at 25%, unless the user confirms both the demand and the capacity to deliver it.
 - Freed hours above the hours the team spends on the workflow, or above what the whole team works in a year: cap at the lower of the two. When the workflow takes more hours than the team works, check both numbers.
@@ -104,8 +104,8 @@ Every field the script reads:
 | `costs.one_off`, `costs.yearly` | The build cost, and the running cost a year. | For net value and payback |
 | `reference_spend` | A one-off amount to test before costs are known, such as a first quote. Adds break-even and payback rows. | Optional |
 | `finance.discount_rate`, `finance.years` | For the one-off spend at which the case breaks even over the years. Defaults to 0.08 and 5. | Optional |
-| `company.revenue`, `company.ebit` | Revenue and EBIT (operating profit) a year. Each runs its own size check. | For the size check, at least one |
+| `company.revenue`, `company.ebit` | Revenue and EBIT (operating profit) a year. Each runs its own size check. A range is tested at its lowest figure above 0, in both cases. | For the size check, at least one |
 
 Work out levers 3 and 4 with the formulas above before entering their totals. The low case pairs low values with high costs, and the high case pairs high values with low costs. For costs, `reference_spend`, `hours_per_unit`, `working_hours_per_fte` and `discount_rate`, a higher figure lowers the value, so the low case takes the higher one. The script also flags freed hours that have no destination.
 
-A missing field the case needs, a 0 where the script divides, a share above 1, or text where a number belongs stops the script with one line that starts "Error:". Fix that input, or ask the user for it when it is a number they would know, then run the script again.
+A missing field the case needs, a field the script does not know, such as a misspelled one, a 0 where the script divides, a share above 1, or text where a number belongs stops the script with one line that starts "Error:". Fix that input, or ask the user for it when it is a number they would know, then run the script again.
