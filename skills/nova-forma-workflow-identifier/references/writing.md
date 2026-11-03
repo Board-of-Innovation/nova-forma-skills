@@ -2,17 +2,15 @@
 
 Run this check on every message before it goes out, and fix what it finds. It is silent: never mention it to the user. The goal is text a sharp colleague would write: plain, specific and short, with nothing that reads as machine-made.
 
-Two sources sit behind it. The AI tells come from the humanizer skill, built on Wikipedia's "Signs of AI writing". The craft rules come from the BOI writing audit, built on David Ogilvy's 1982 memo "How to Write" and Roman and Raphaelson's "Writing That Works". When either skill is installed, it is the long form of this file.
-
 ## The 30-second check
 
 Read the message as the user will, on a phone, then answer six questions:
 
-1. Can I say in one sentence what this message asks the user to do? Is that ask written down, once, where they will see it?
+1. Can I say in one sentence what this message asks the user to do? Is each question asked once, where they will see it?
 2. Would a manager new to AI understand every word on first read?
 3. Does every number say what it means for them, and where it came from?
 4. Does any sentence stage a point instead of making it?
-5. Is there a dash used as punctuation, a word from the lists below, or a bold word that carries nothing?
+5. Is there a dash used as punctuation, a word from the list below or from the plain words in `display.md`, or a bold word that carries nothing?
 6. Can I cut a sentence without losing a fact? Then cut it.
 
 ## A. Remove the AI tells
@@ -47,13 +45,13 @@ Words to avoid wherever they appear: additionally, align with, crucial, delve, d
 
 **Short units.** Sentences of 20 words or fewer, never past 25. Paragraphs of three sentences at most. Prefer the short word: use, not utilize; start, not commence; help, not facilitate; about, not approximately; to, not in order to; show, not demonstrate.
 
-**No jargon.** Never: synergies, verticals, bandwidth, low-hanging fruit, move the needle, ecosystem, holistic, scalable, operationalize, value-add, stakeholder without a name. Never, unless the user uses them first: AI agent, LLM, prompt, model, agentic, RAG, MCP, context window, use case. A term from the user's own business is fine.
+**No jargon.** Use the plain words in `display.md`. It holds the one list of words to replace and words to explain.
 
 **Comprehension.** No acronym without its meaning the first time. No pronoun without a clear owner. Someone who missed the last meeting should still follow.
 
 **Completeness.** Say the point. "I suggest RFP to proposal" beats "RFP to proposal could be an interesting candidate to explore".
 
-**One clear ask.** Each message ends with one decision for the user, asked once, in a question card where the environment has them.
+**One step at a time.** Each message asks for one thing: a round of calls, or the decision to move on. Ask each question once, in a question card where the environment has them. The Where I need your input bullets are follow-ups to it, never extra decisions.
 
 **No hedging, except labelled hypotheses.** Write what you think. Labels such as "hypothesis", "unmeasured", "to confirm" and "?" tell the user what is still a guess: keep them. Do not soften a suggestion the evidence supports.
 

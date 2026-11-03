@@ -117,7 +117,7 @@ To choose a skill yourself, type `/` in the message box and pick it. Each step a
 ## Your data
 
 - The skills run inside your assistant. Nothing is sent to Board of Innovation, and the skills contain no tracking.
-- They draw on what you write, the files you attach and, where your assistant has them, your earlier chats and connected tools. A result that used more than the conversation ends with a line naming its sources, and you can tell the skills which sources to leave out.
+- They read what you write and the files you attach. They ask before they open your earlier chats or any connected tool, and they only use what you allow. A result that used more than the conversation ends with a line naming its sources.
 - The value sizer's script only does arithmetic. It runs in your assistant's own code environment, reads only the numbers it is given and makes no network calls.
 - Your assistant's provider handles your conversation under your plan's terms, as with any other chat.
 - Every estimate is marked as a hypothesis. Check names and numbers before you share a result.
@@ -153,7 +153,7 @@ The skills are licensed under the [Apache License 2.0](LICENSE): you may use, ch
 
 ## Acknowledgements
 
-The writing rules draw on David Ogilvy's 1982 memo "How to Write" and on "Writing That Works" by Kenneth Roman and Joel Raphaelson. The list of signs of machine-made writing draws on the [humanizer](https://github.com/blader/humanizer) skill and Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing).
+The writing rules draw on David Ogilvy's 1982 memo "How to Write" and on "Writing That Works" by Kenneth Roman and Joel Raphaelson. The list of signs of machine-made writing adapts the [humanizer](https://github.com/blader/humanizer) skill by Siqi Chen, which builds on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). It is used under the MIT License, and its notice is in [NOTICE](NOTICE).
 
 ## About
 
