@@ -1,6 +1,6 @@
 # Example results
 
-Figures are illustrative. To keep them short, the examples leave out the tracker and the brief so far, which every step message still opens with.
+Figures are illustrative. To keep them short, the examples leave out the tracker and the brief so far, which every step message still opens with. The second example shows only the statement, measures, principles and red lines.
 
 ## Inquiry to quote
 
@@ -10,7 +10,7 @@ The scope card from step 1 says the redesign must show: engineer hours on standa
 
 `Receiver ✓ Solution-free ✓ Stop ✓ Measurable ✓`
 
-[Visual: one bar per measure, today on the left, target on the right. Turnaround: days → 1 day. Quotes checked against the rules: a sample → every quote.]
+[Visual: one bar per measure, today on the left, target on the right. Turnaround: days → one working day. Quotes checked against the rules: a sample → every quote.]
 
 | Measure | Today | Target | Source |
 | --- | --- | --- | --- |
@@ -39,12 +39,11 @@ How we use this: in the redesign week, each new way of working is scored on thes
 Where I need your input:
 
 - Review the statement and share feedback.
-- Confirm one working day as the turnaround target. The scope card set no deadline.
 - Check whether time records split standard from novel requests. If not, engineer hours stay unmeasured.
 
 ## Sales to proposal at a consultancy
 
-The user started here, with no scope card.
+The user started here, with no scope card, and allowed their CRM and time records, where today's figures come from.
 
 > The client sponsor can make an informed buying decision and take it to their executive committee without rework, at a price above the firm's margin floor.
 
