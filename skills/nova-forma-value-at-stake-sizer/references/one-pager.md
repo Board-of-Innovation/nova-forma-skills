@@ -8,7 +8,7 @@ Use the environment's document type where there is one, such as an artifact, a c
 
 ## What it holds
 
-The tracker comes first, with all four steps marked `✓ Done`. Nothing goes above it. Then the title, `<Workflow>: brief for the redesign week`, and five short sections in this order. Each one reuses the visual of its step from `display.md`, or that visual's text version where nothing can be drawn.
+The tracker comes first, with each step marked `✓ Done`, or `Skipped` when it never ran. Nothing goes above it. Then the title, `<Workflow>: brief for the redesign week`, and five short sections in this order. Each one reuses the visual of its step from `display.md`, or that visual's text version where nothing can be drawn.
 
 | Section | What it holds | Visual |
 | --- | --- | --- |
@@ -19,7 +19,8 @@ The tracker comes first, with all four steps marked `✓ Done`. Nothing goes abo
 | Open points | The open asks from the four steps that would change the brief, at most eight, those that move the value or the scope first | A checklist, one `- [ ]` per point |
 
 - **Copy from the results the user accepted**: the same numbers, names and words. Add no new number or claim here.
-- **A step that never ran** keeps its section, with one line: `Not done yet: run step N, <step name>.` When the user gave some of that step's content, such as the workflow's start and end under "If you start here", show it above that line, marked `from you`. Its tracker column reads `Skipped`, as `display.md` says. Never fill it in from guesses, and end the open points with one line saying the four skills are at <https://github.com/Board-of-Innovation/nova-forma-skills>.
+- **A step that never ran** keeps its section, with one line: `Not done yet: run step N, <step name>.` When the user gave some of that step's content, such as the workflow's start and end under "If you start here", show it above that line, marked `from you`. Its tracker column reads `Skipped`, as `display.md` says. Never fill it in from guesses.
+- **When a step never ran**, end the open points with one line, outside the eight, saying the four skills are at <https://github.com/Board-of-Innovation/nova-forma-skills>.
 - **Each open point once**, in the words of the step that raised it. Leave out the ones the user has settled since.
 - **Cut detail before you cut a section.** Two lines and a visual make a section.
 - **Close with the sources line** from `context.md` when any step used more than the conversation.
@@ -98,4 +99,4 @@ Where I need your input:
 - Header "One-pager". "Is the one-pager ready to share with the people in the redesign week?"
 - Options: "Yes, it's ready to share (Recommended)", "Adjust it first".
 
-Had the user skipped step 3, its section would read "Not done yet: run step 3, Map today's work.", and its tracker column `Skipped`.
+Had the user skipped step 3, its section would read "Not done yet: run step 3, Map today's work.", its tracker column `Skipped`, and the open points would end with the line on where the four skills are.

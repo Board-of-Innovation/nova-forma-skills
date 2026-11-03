@@ -11,7 +11,7 @@ The scope card says small requests are turned away today, so freed hours would b
 **Cards**
 
 - Header "Team full". "Does some work go unanswered, or get a rushed answer, because the team is full?" Options: "Yes, some work is turned away or rushed (Recommended)" with "Your notes mention small requests declined.", "No, we keep up with all of it".
-- Header "Freed hours". "If this work took less time, where would the hours go? Pick one or more." Options: "More quotes (Recommended)", "Fewer hires as people leave", "More time on quality".
+- Header "Freed hours". "If this work took less time, where would the hours go? Pick one or more." Options: "More quotes (Recommended)", "Fewer hires as people leave", "Less overtime or temporary help", "More time on quality".
 - Header "Priority". "Which result matters most to the business?" Options: "Better price or margin (Recommended)" with "Discounts drift outside the rules today.", "Win more work", "Faster turnaround", "Lower cost or risk".
 
 The user answers: yes, small ones are turned away; more quotes, and fewer hires as people leave; price first.
