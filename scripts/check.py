@@ -81,7 +81,7 @@ BOI_HOST_RE = re.compile(
     r"(?<![A-Za-z0-9.@-])(?:[A-Za-z0-9-]+\.)*boardofinnovation\.[A-Za-z]{2,}(?![A-Za-z0-9-])",
     re.IGNORECASE,
 )
-ALLOWED_BOI_HOSTS = ("novaforma.boardofinnovation.ai", "www.boardofinnovation.com")
+ALLOWED_BOI_HOSTS = ("novaforma.ai", "www.boardofinnovation.com")
 GITHUB_ORG_RE = re.compile(
     r"github\.com/(Board-of-Innovation[A-Za-z0-9-]*)(?:/([A-Za-z0-9._-]+))?", re.IGNORECASE
 )
@@ -907,7 +907,7 @@ def check_public(files: list[Path]) -> tuple[Section, Section]:
                 if not email_allowed(match.group(0)):
                     public.error(
                         f"{where}: email address {match.group(0)}",
-                        "remove email addresses; point to https://novaforma.boardofinnovation.ai "
+                        "remove email addresses; point to https://novaforma.ai "
                         "or use a noreply address",
                     )
             for match in INTERNAL_HOST_RE.finditer(line):
@@ -919,7 +919,7 @@ def check_public(files: list[Path]) -> tuple[Section, Section]:
                 if match.group(0).lower() not in ALLOWED_BOI_HOSTS:
                     public.error(
                         f"{where}: Board of Innovation address {match.group(0)}",
-                        "the only allowed addresses are https://novaforma.boardofinnovation.ai "
+                        "the only allowed addresses are https://novaforma.ai "
                         "and https://www.boardofinnovation.com",
                     )
             for match in GITHUB_ORG_RE.finditer(line):

@@ -8,7 +8,7 @@ This repository is public. Anyone can read every file, commit message, branch na
 
 - **Never add client details.** No client or prospect names, no project code names, and no detail that points to one company, such as a sector plus a size plus a city.
 - **Never add Board of Innovation internals.** No internal team, project or tool names, and no internal documents or excerpts from them.
-- **Never add links to internal tools or documents.** That covers Slack, Notion, Google Drive and Docs, Linear, Granola, Jira and Confluence, Miro, Figma and private GitHub repositories. The only Board of Innovation links allowed are <https://novaforma.boardofinnovation.ai> and <https://www.boardofinnovation.com>.
+- **Never add links to internal tools or documents.** That covers Slack, Notion, Google Drive and Docs, Linear, Granola, Jira and Confluence, Miro, Figma and private GitHub repositories. The only Board of Innovation links allowed are <https://novaforma.ai> and <https://www.boardofinnovation.com>.
 - **Never add personal data.** No email addresses, phone numbers or names of people who are not public authors.
 - **Never add unpublished figures.** No prices, rates, margins, pipeline or client results that Board of Innovation has not published.
 - **Never add secrets.** No keys, tokens or passwords.

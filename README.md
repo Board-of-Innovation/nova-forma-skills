@@ -157,4 +157,4 @@ The writing rules draw on David Ogilvy's 1982 memo "How to Write" and on "Writin
 
 ## About
 
-Nova Forma is an offering by Board of Innovation. In one week, it redesigns one of your workflows around AI, together with your team. Read more at [novaforma.boardofinnovation.ai](https://novaforma.boardofinnovation.ai).
+Nova Forma is an offering by Board of Innovation. In one week, it redesigns one of your workflows around AI, together with your team. Read more at [novaforma.ai](https://novaforma.ai).

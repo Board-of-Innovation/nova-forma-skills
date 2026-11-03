@@ -5,9 +5,9 @@
   "description": "Four skills that prepare an AI-first workflow redesign: pick the workflow, define success, map today's work and size the value, ending with a one-page brief for the redesign week.",
   "author": {
     "name": "Board of Innovation",
-    "url": "https://novaforma.boardofinnovation.ai"
+    "url": "https://novaforma.ai"
   },
-  "homepage": "https://novaforma.boardofinnovation.ai",
+  "homepage": "https://novaforma.ai",
   "repository": "https://github.com/Board-of-Innovation/nova-forma-skills",
   "license": "Apache-2.0",
   "keywords": [
