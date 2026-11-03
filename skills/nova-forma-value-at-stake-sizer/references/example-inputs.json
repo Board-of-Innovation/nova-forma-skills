@@ -2,7 +2,7 @@
   "workflow": "Inquiry to quote",
   "currency": "EUR",
   "baseline": {
-    "hours_per_year": 11300,
+    "hours_per_year": 11500,
     "working_hours_per_fte": 1700,
     "loaded_cost_per_fte": 75000,
     "team_fte": 8

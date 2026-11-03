@@ -15,13 +15,14 @@ The tracker comes first, with all four steps marked `✓ Done`. Nothing goes abo
 | The workflow | From what start to what end, why it was picked in one line, the owner and the sponsor | The swimlane flow from the scope card |
 | Success | The outcome statement, the measures with today and target, the red lines with their owners | The statement as a card, each measure as a today → target bar, the red lines in a table marked `⛔` |
 | Today's work | How many requirements, which steps carry most of them, and the exceptions that matter most | The heat map of steps against the five buckets |
-| The value | The yearly range before costs, the source of value that leads, the rough cost and the payback | The floating bars for each source of value and the total |
-| Open points | Every unconfirmed guess and open ask from the four steps | A checklist, one `- [ ]` per point |
+| The value | The yearly range before costs, the source of value that leads, the rough cost and the payback, or the spending ceiling when there is no cost | The floating bars for each source of value and the total |
+| Open points | The open asks from the four steps that would change the brief, at most eight, those that move the value or the scope first | A checklist, one `- [ ]` per point |
 
 - **Copy from the results the user accepted**: the same numbers, names and words. Add no new number or claim here.
-- **A step that never ran** keeps its section, with one line: `Not done yet: run step N, <step name>.` Its tracker column reads `Skipped`, as `display.md` says. Never fill it in from guesses.
+- **A step that never ran** keeps its section, with one line: `Not done yet: run step N, <step name>.` When the user gave some of that step's content, such as the workflow's start and end under "If you start here", show it above that line, marked `from you`. Its tracker column reads `Skipped`, as `display.md` says. Never fill it in from guesses, and end the open points with one line saying the four skills are at <https://github.com/Board-of-Innovation/nova-forma-skills>.
 - **Each open point once**, in the words of the step that raised it. Leave out the ones the user has settled since.
 - **Cut detail before you cut a section.** Two lines and a visual make a section.
+- **Close with the sources line** from `context.md` when any step used more than the conversation.
 
 ## The closing ask
 
@@ -62,24 +63,28 @@ From a request for a quote landing in the shared inbox to a correct quote the cu
 
 15 requirements. Reading the request, building the price, and sending and logging carry the most. About half of requests arrive with missing specifications.
 
-[Visual: the heat map of the six steps against the five buckets, the three heaviest cells in the accent.]
+[Visual: the heat map of the six steps against the five buckets, the columns of the three busiest steps in the accent.]
 
 ### The value
 
 Worth about EUR 420k to 1M a year, before costs. Better prices and the small requests you now decline lead.
 
-[Visual: floating bars from low to high. Better results EUR 200k to 550k in the accent; freed time put to more quotes EUR 190k to 380k; savings EUR 30k to 96k; a new offer not sized; total EUR 420k to 1M.]
+[Visual: floating bars from low to high. Better results EUR 200k to 550k in the accent; freed time put to more quotes EUR 190k to 380k; savings EUR 30k to 97k; a new offer not sized; total EUR 420k to 1M.]
 
 At EUR 250k to 400k to build and EUR 60k to 100k a year, the net value is EUR 320k to 960k a year, and payback runs 3 to 15 months.
 
 ### Open points
 
-- [ ] Confirm the sales director as sponsor.
-- [ ] Confirm one working day as the turnaround target.
-- [ ] Name who owns the margin check before sending.
 - [ ] Check last quarter's discounts against the rules: the leakage figure carries half the low case.
 - [ ] Count last year's declined requests.
+- [ ] Check how many requests really need an engineer: if most do, the gain shrinks.
 - [ ] Decide where 1,700 freed hours go in the high case.
+- [ ] Confirm the sales director as sponsor.
+- [ ] Name who owns the margin check before sending, or confirm nobody does.
+- [ ] Ask two inside sales reps how often a request arrives with missing specifications.
+- [ ] Check whether time records split standard from novel requests. If not, engineer hours stay unmeasured.
+
+Sources: your note, Google Drive and Gmail.
 
 **Closing message**
 

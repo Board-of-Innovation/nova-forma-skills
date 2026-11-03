@@ -6,7 +6,7 @@ The user never hears the word lever. Name the four as sources of value: savings 
 
 FTE released × loaded cost per FTE × realization share.
 
-The realization share is the part of the released FTE that turns into cash within a year. Name the mechanism, such as natural attrition, a hiring freeze, fewer contractors or less overtime. Without a mechanism the realization share is zero, and the hours meant for savings have no destination. A low case of 50% and a high case of 80% is a reasonable start when a mechanism exists.
+The realization share is the part of the released FTE that turns into cash within a year. Name the mechanism, such as natural attrition, a hiring freeze, fewer contractors or less overtime. Without a mechanism the realization share is zero, and the hours meant for savings have no destination. A low case of 50% and a high case of 80% is a reasonable start when a mechanism exists. When less than one FTE is freed, fewer hires as people leave rarely turns it into cash: count less overtime or fewer temporary hours instead.
 
 ## Lever 2: capacity put to use
 
@@ -22,6 +22,7 @@ Extra units handled × conversion × value per unit × contribution margin.
 | --- | --- | --- |
 | Speed | Change in win or conversion rate × volume × value per unit × contribution margin | CRM win rates by response time |
 | Quality | Errors or rework avoided × cost per error | Complaints, credit notes, rework logs |
+| Customers kept | Customers lost avoided × yearly margin per customer | Churn and complaint logs |
 | Price realization | Revenue affected × change in realization | Discounts given against the rules |
 | Working capital | Days reduced × daily value × cost of capital | Days sales outstanding, inventory days |
 | Risk | Incidents avoided × cost per incident | Audit findings, penalties |
@@ -39,7 +40,7 @@ New units or customers × price × contribution margin, for an offer the redesig
 
 ## Checks on the size of the case
 
-Run all four, and name any failure in plain words. The script runs each one when it has the inputs that check needs.
+Run all four, and name any failure in plain words. The script runs each one when it has the inputs that check needs, and prints a "Not checked" line for each one it could not run. Run that check by hand, or ask the user for the missing input.
 
 - Extra units above 25% of today's volume: cap at 25%, unless the user confirms both the demand and the capacity to deliver it.
 - Freed hours above the hours the team spends on the workflow, or above what the whole team works in a year: cap at the lower of the two. When the workflow takes more hours than the team works, check both numbers.
@@ -56,13 +57,13 @@ Run all four, and name any failure in plain words. The script runs each one when
 
 ## The calculator's inputs
 
-`scripts/value_case.py` reads one JSON file. A number holds either a single value or a pair such as `{"low": 0.3, "high": 0.6}`. Shares run from 0 to 1, so 30% is 0.3. When a pair has its low above its high, the script swaps the two and says so.
+`scripts/value_case.py` reads one JSON file, such as the sample below. `example-inputs.json` holds the full input for the inquiry-to-quote example. A number holds either a single value or a pair such as `{"low": 0.3, "high": 0.6}`. Shares run from 0 to 1, so 30% is 0.3. When a pair has its low above its high, the script swaps the two and says so.
 
 ```json
 {
-  "workflow": "Inquiry to quote",
+  "workflow": "Name of the workflow",
   "currency": "EUR",
-  "baseline": {"hours_per_year": 11300, "working_hours_per_fte": 1700, "loaded_cost_per_fte": 75000,
+  "baseline": {"hours_per_year": 11500, "working_hours_per_fte": 1700, "loaded_cost_per_fte": 75000,
                "team_fte": 8},
   "addressable_share": {"low": 0.3, "high": 0.6},
   "capacity_split": {"fte_savings": 0.4, "put_to_use": 0.6, "quality": 0},
@@ -107,4 +108,4 @@ Every field the script reads:
 
 Work out levers 3 and 4 with the formulas above before entering their totals. The low case pairs low values with high costs, and the high case pairs high values with low costs. For costs, `reference_spend`, `hours_per_unit`, `working_hours_per_fte` and `discount_rate`, a higher figure lowers the value, so the low case takes the higher one. The script also flags freed hours that have no destination.
 
-A missing field the case needs, a 0 where the script divides, a share above 1, or text where a number belongs stops the script with one line that starts "Error:". Fix that input and run the script again.
+A missing field the case needs, a 0 where the script divides, a share above 1, or text where a number belongs stops the script with one line that starts "Error:". Fix that input, or ask the user for it when it is a number they would know, then run the script again.
