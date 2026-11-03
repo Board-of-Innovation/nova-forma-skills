@@ -1,0 +1,63 @@
+{
+  "workflow": "Inquiry to quote",
+  "currency": "EUR",
+  "baseline": {
+    "hours_per_year": 11300,
+    "working_hours_per_fte": 1700,
+    "loaded_cost_per_fte": 75000
+  },
+  "addressable_share": {
+    "low": 0.3,
+    "high": 0.6
+  },
+  "capacity_split": {
+    "fte_savings": 0.4,
+    "put_to_use": 0.6
+  },
+  "put_to_use": {
+    "unit_name": "quotes",
+    "hours_per_unit": 2.0,
+    "demand_cap_units": 1200,
+    "conversion": {
+      "low": 0.15,
+      "high": 0.25
+    },
+    "value_per_unit": 5000,
+    "contribution_margin": 0.25
+  },
+  "impact_levers": [
+    {
+      "name": "Price realization on quoted revenue",
+      "low": 200000,
+      "high": 400000
+    },
+    {
+      "name": "Win rate on today's quotes from faster turnaround",
+      "low": 0,
+      "high": 150000
+    }
+  ],
+  "value_creation": [
+    {
+      "name": "Same-day quotes sold as part of the offer",
+      "low": 0,
+      "high": 0
+    }
+  ],
+  "costs": {
+    "one_off": {
+      "low": 250000,
+      "high": 400000
+    },
+    "yearly": {
+      "low": 60000,
+      "high": 100000
+    }
+  },
+  "fte_savings": {
+    "realization": {
+      "low": 0.5,
+      "high": 0.8
+    }
+  }
+}
