@@ -1,10 +1,10 @@
 # Example run: inquiry to quote
 
-Figures are illustrative. The inputs sit in `example-inputs.json`.
+Figures are illustrative. The inputs sit in `example-inputs.json`. To keep it short, the example leaves out the tracker and the brief so far, which every step message still opens with.
 
 ## Moment 1: where the value lands
 
-The scope card says the team is full, so freed hours would be worth more quotes.
+The scope card says small requests are turned away today, so freed hours would be worth more quotes.
 
 [Visual: four cards. Freed time put to more quotes ● likely, "small requests are declined today". Better results ● likely, "every quote checked against the discount rules". Savings ◐ possible, "only as people leave". A new offer ○ unlikely, "same-day quotes, not sized".]
 

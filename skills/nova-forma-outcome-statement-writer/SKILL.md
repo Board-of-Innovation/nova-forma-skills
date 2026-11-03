@@ -19,7 +19,7 @@ The Nova Forma chain: 1. workflow identifier, **2. outcome statement writer** (t
 
 Read `references/display.md` for how every message looks, asks and draws, and `references/writing.md` for the check every message passes before it goes out. The users are business owners and managers, mostly new to AI, so every message must work without help.
 
-Start every reply with the tracker from `display.md`: step 2, Define success, with the parts your calls → success definition.
+Start every step message with the tracker from `display.md`: step 2, Define success, with the parts your calls → success definition.
 
 **Why this step**, to say when it opens: "This sets the yardstick for the redesign: work that serves the result stays, and work that only exists because systems don't connect goes. The measures and red lines then help us pick between the new ways of working we design."
 

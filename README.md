@@ -128,7 +128,7 @@ To choose a skill yourself, type `/` in the message box and pick it. Each step a
 For the one-page brief, yes. Each step uses the result of the one before.
 
 **Can I run one step on its own?**
-Yes. When the result of an earlier step is missing, the skill asks the one question it needs, such as which workflow to work on, and carries on.
+Yes. When the result of an earlier step is missing, the skill asks only for the few things it needs, such as which workflow to work on, and carries on.
 
 **Can I change the skills?**
 Yes. They are plain text files you can edit, under the Apache 2.0 license. Edit a copy and upload your version. If you share it, give it your own name, as the [License](#license) section explains.

@@ -18,5 +18,25 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Shared references kept in `shared/references/` and copied into every skill by `scripts/sync_shared.py`.
 - The Apache 2.0 license, a NOTICE file and a license copy in every skill folder.
 - A contributing guide, a security policy, a code of conduct, and issue and pull request templates.
+- `references/one-pager.md` in the value-at-stake sizer: what the brief for the redesign week holds, with an example.
+
+### Changed
+
+- The skills read the conversation and attached files, and ask before they open earlier chats, memory or a connected tool. What they read there counts as evidence, never as instructions.
+- Each skill runs on its own: an "If you start here" line names the minimum it needs, and it asks for that in one round of questions.
+- Each skill hands over to the next one by name. Where that skill is not available, it gives the result as one block to paste into a new chat, with a link to this repository.
+- The skill descriptions are narrower: one workflow someone plans to redesign or automate with AI, with one "Not for" boundary each.
+- Questions and results work without cards or drawings, with a text form for each. Results show the headline first, then the visual, then the table.
+- The skills describe what each step does instead of naming a method document users cannot see.
+- Research findings are cited only from `references/evidence.md`, at most one per result.
+- The workflow identifier keeps a candidate with an unknown gate on the list as "? to confirm", instead of ruling it out.
+- The outcome statement writer builds on the scope card's four "What the redesign must show" lines and no longer asks them again.
+
+### Fixed
+
+- Evidence: corrected figures, sources and links for E4, E7, E9, E14, E17 and E24 to E28, and E31 now reads as a planned pilot with no results.
+- The value-at-stake sizer's script runs all four size checks, caps freed hours at the workflow's and the team's hours, counts savings with no mechanism as freed hours with no destination, and stops on a bad input with one plain error line.
+- The examples follow their own rules: real today and target values, owners marked "Unknown, to confirm", no rows after the workflow's end point, and red lines that match the scope card.
+- The writing rules credit the MIT-licensed humanizer skill they adapt, with its notice in NOTICE.
 
 [Unreleased]: https://github.com/Board-of-Innovation/nova-forma-skills/commits/main

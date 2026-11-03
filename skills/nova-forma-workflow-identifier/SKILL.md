@@ -19,7 +19,7 @@ The Nova Forma chain: **1. workflow identifier** (this skill), 2. outcome statem
 
 Read `references/display.md` for how every message looks, asks and draws, and `references/writing.md` for the check every message passes before it goes out. The users are business owners and managers, mostly new to AI, so every message must work without help.
 
-Start every reply with the tracker from `display.md`: step 1, Pick the workflow, with the parts where to look → shortlist → scope card.
+Start every step message with the tracker from `display.md`: step 1, Pick the workflow, with the parts where to look → shortlist → scope card.
 
 **Why this step**, to say when it opens: "A redesign takes a week of your team's time, so it should go where AI can change the result most. We pick one workflow, with a clear start and finish, and someone who can decide."
 
@@ -34,7 +34,7 @@ The skill runs in three moments, and the user decides at the end of each one. As
 2. **Send the opening message**, visible before any question card:
    - the tracker and Why this step;
    - **What I can use**, in two sentences that name the real sources, as `context.md` shows. When there is nothing, say you will start from the standard map of workflows;
-   - one line on what you already found, such as "Your recent chats are about proposals, so I'd start in commercial work";
+   - one line on what you already found in this chat or the attached files, such as "Your note mentions slow proposals, so I'd start in commercial work";
    - **the visual**: the source chips, and the four families of work from `references/workflow-map.md` as four columns with their areas, so the user sees the whole menu before choosing.
 
 3. **Ask in two rounds of question cards**, as `display.md` describes. Recommend an answer on every card and say where it came from in its description.
@@ -62,8 +62,8 @@ The skill runs in three moments, and the user decides at the end of each one. As
 8. **Send the shortlist** as one visible message, in this order:
    - tracker and brief so far;
    - **Why**: "Six checks show where value leaks today, and whether someone can act on it.";
-   - **the visual**: horizontal score bars out of 18, sorted, the suggestion in the accent, "not yet" greyed with its reason;
    - **My suggestion**: one sentence naming the workflow, one or two on why it beats the runner-up, and the finding from step 7 if there is one;
+   - **the visual**: horizontal score bars out of 18, sorted, the suggestion in the accent, "not yet" greyed with its reason;
    - **the shortlist table**: #, Workflow, Starts with → ends with, Score with a bar such as `16/18 ▰▰▰▰▰▱`, and Why, in one line that names its evidence, such as "3 meetings in Granola" or "from the standard map";
    - **Where I need your input**: review the shortlist and share feedback, then the gates marked "? to confirm" and what would lift a "not yet". Group the gates into one ask where you can, such as "Tell me who owns each of the top three.";
    - **Appendix: how each workflow scored**, after a horizontal rule and "For reference, no action needed.": the six checks as rows, the candidates by number as columns, a Total /18 row, `?` on unknowns, the two gates marked, with ✗ on a gate that fails and "? to confirm" on an unknown one. Close with one line on what would settle the biggest `?`.

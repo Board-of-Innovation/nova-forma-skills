@@ -4,8 +4,8 @@ Verified public findings, checked 3 November 2026.
 
 ## Rules
 
-1. Cite only from this file or from sources opened in this session.
-2. Give at most two findings per result: one benchmark for the pick, and one test for the user's idea.
+1. Cite research findings only from this file. The user's own files and tools are sources, named as `context.md` says, never research findings.
+2. Give at most one finding per result, and only where it fits the user's case. A side question, as in sections 7 and 8, may use the findings listed there.
 3. Name the source in plain words, with institution and year.
 4. Never present a vendor claim or prediction as fact. Say "a vendor reports" or "Gartner predicts".
 5. When nothing fits, say so. Point the user to their own data: the full-year figures their systems hold, or 20 timed cases where nothing records the timing.

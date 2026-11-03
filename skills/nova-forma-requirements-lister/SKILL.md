@@ -19,7 +19,7 @@ The Nova Forma chain: 1. workflow identifier, 2. outcome statement writer, **3. 
 
 Read `references/display.md` for how every message looks, asks and draws, and `references/writing.md` for the check every message passes before it goes out. The users are business owners and managers, mostly new to AI, so every message must work without help.
 
-Start every reply with the tracker from `display.md`: step 3, Map today's work, with the parts your calls → requirements.
+Start every step message with the tracker from `display.md`: step 3, Map today's work, with the parts your calls → requirements.
 
 **Why this step**, to say when it opens: "A redesign starts from what the work needs. With every requirement listed, its owner and where it shows up, we can test each one against the result. Then we keep it, combine it, move it or drop it. The odd cases decide whether a new way of working holds up in real life."
 
@@ -29,7 +29,7 @@ The five buckets are what the work must **know**, **decide**, **produce**, **do*
 
 1. **Read the context** as `references/context.md` describes. The scope card and the outcome statement set the boundary: nothing before what starts the workflow, nothing after what the receiver gets.
 
-   **If you start here**: you need the workflow, with what starts it, what it ends with and who receives the result, plus the outcome statement if there is one.
+   **If you start here**: you need the workflow, what starts it, what the receiver gets at the end, and who that receiver is, plus the outcome statement if there is one. Ask for what is missing as `context.md` describes.
 
 2. **Send the opening message**, visible before the cards: the tracker, the brief so far, Why this step, and one line on what you found and where, with a visual: the workflow's steps as a strip, each marked by how much evidence you have, so the user sees where the gaps are.
 
@@ -65,6 +65,6 @@ Send it as one visible message, in this order:
 6. **Where I need your input**: review the list and share feedback, then each open point: a requirement with no owner or reason, sources that contradict each other, or a short set of questions to forward to the people who do the work.
 7. **Appendix: all requirements by bucket**, after a horizontal rule and "For reference, no action needed.": one table per bucket, same three columns. Where the environment can attach a file or a collapsed section, use that instead.
 
-Then ask the next step in a question card: "Does this match how the work really runs?" Options: "Yes, go to step 4: size the value (Recommended)" and "Adjust the list first". Without cards, put the question in a quote block before the appendix and repeat it as the last line: "Reply Accept to go to step 4, or Adjust with your changes." On accept, continue with step 4, Size the value, by following the nova-forma-value-at-stake-sizer skill. If that skill is not available here, say so in one line, give the accepted requirements and exceptions as one block the user can paste into a new chat, and say the four Nova Forma skills are at <https://github.com/Board-of-Innovation/nova-forma-skills>.
+Then ask the next step in a question card: "Does this match how the work really runs?" Options: "Yes, go to step 4: size the value (Recommended)" and "Adjust the list first". Without cards, put the question in a quote block before the appendix and repeat it as the last line: "Reply Accept to go to step 4, or Adjust with your changes." On accept, continue with step 4, Size the value, by following the nova-forma-value-at-stake-sizer skill. If that skill is not available here, say so in one line, give the accepted requirements and exceptions, with the workflow's start and end, as one block the user can paste into a new chat, and say the four Nova Forma skills are at <https://github.com/Board-of-Innovation/nova-forma-skills>.
 
 `references/example-inquiry-to-quote.md` shows a result.

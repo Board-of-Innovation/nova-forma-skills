@@ -1,6 +1,6 @@
 # Example results
 
-Figures are illustrative.
+Figures are illustrative. To keep them short, the examples leave out the tracker and the brief so far, which every step message still opens with.
 
 ## Inquiry to quote
 

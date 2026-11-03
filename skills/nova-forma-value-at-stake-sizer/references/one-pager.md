@@ -13,7 +13,7 @@ The tracker comes first, with all four steps marked `✓ Done`. Nothing goes abo
 | Section | What it holds | Visual |
 | --- | --- | --- |
 | The workflow | From what start to what end, why it was picked in one line, the owner and the sponsor | The swimlane flow from the scope card |
-| Success | The outcome statement, the measures with today and target, the red lines with their owners | The statement as a card, each measure as a today → target bar, the red lines as a fence |
+| Success | The outcome statement, the measures with today and target, the red lines with their owners | The statement as a card, each measure as a today → target bar, the red lines in a table marked `⛔` |
 | Today's work | How many requirements, which steps carry most of them, and the exceptions that matter most | The heat map of steps against the five buckets |
 | The value | The yearly range before costs, the source of value that leads, the rough cost and the payback | The floating bars for each source of value and the total |
 | Open points | Every unconfirmed guess and open ask from the four steps | A checklist, one `- [ ]` per point |
@@ -51,7 +51,12 @@ From a request for a quote landing in the shared inbox to a correct quote the cu
 
 [Visual: one bar per measure, today to target. Turnaround: days → one working day. Quotes checked against the rules: a sample → every quote. Small requests: most declined → every one quoted.]
 
-[Visual: the red lines as a fence. ⛔ Never quote below the margin floor (pricing manager). ⛔ Discounts above the limit need the sales manager's approval (sales manager). ⛔ Every deviation from the specification is signed (application engineer). ⛔ A person still signs every price and bid (sales manager).]
+| Red line | Owner |
+| --- | --- |
+| ⛔ Never quote below the margin floor | Pricing manager |
+| ⛔ Discounts above the limit need the sales manager's approval | Sales manager |
+| ⛔ Every deviation from the specification is signed | Application engineer |
+| ⛔ A person still signs every price and bid before anything leaves | Sales manager |
 
 ### Today's work
 

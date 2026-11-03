@@ -45,9 +45,9 @@ The user picks Commercial and Operational.
 
 Six checks show where value leaks today, and whether someone can act on it.
 
-[Visual: horizontal bars out of 18, sorted. Inquiry to quote 17 in the accent; Order entry 15; Documentation packs 14, greyed, "not yet: no owner"; Contract to signature 12; Lead qualification 7, its gates to confirm.]
-
 **My suggestion:** start with inquiry to quote. Small requests are declined today, so it loses money every month. It beats order entry, which is slow to type but rarely loses an order.
+
+[Visual: horizontal bars out of 18, sorted. Inquiry to quote 17 in the accent; Order entry 15; Documentation packs 14, greyed, "not yet: no owner"; Contract to signature 12; Lead qualification 7, its gates to confirm.]
 
 | # | Workflow | Starts with → ends with | Score | Why |
 | --- | --- | --- | --- | --- |

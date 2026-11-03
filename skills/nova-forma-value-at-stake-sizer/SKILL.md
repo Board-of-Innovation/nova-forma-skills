@@ -21,7 +21,7 @@ Two rules matter most. Freed hours are worth nothing until someone decides where
 
 Read `references/display.md` for how every message looks, asks and draws, and `references/writing.md` for the check every message passes before it goes out. The users are business owners and managers, mostly new to AI, so every message must work without help.
 
-Start every reply with the tracker from `display.md`: step 4, Size the value, with the parts where the value lands → numbers → value range.
+Start every step message with the tracker from `display.md`: step 4, Size the value, with the parts where the value lands → numbers → value range.
 
 **Why this step**, to say when it opens: "Freed hours are only worth money once someone decides where they go. So we first agree where the value lands, then ask only the numbers that size it, and you get a range you can defend."
 
@@ -31,7 +31,7 @@ The skill runs in three moments. Never ask for numbers before the user has agree
 
 1. **Read the context** as `references/context.md` describes. The scope card gives where the value comes from, the outcome statement the measures, and the requirements list the work.
 
-   **If you start here**: the minimum is the workflow, from what start to what end, who does the work today, and where the value comes from. The cards in step 3 settle where the value comes from, so ask the other two first.
+   **If you start here**: you need the workflow, from what starts it to what the receiver gets at the end, who does the work today, and where the value comes from. Ask for what is missing as `context.md` describes. The cards in step 3 settle where the value comes from, so ask the other two first.
 
 2. **Send the opening message**, visible before the cards: the tracker, the brief so far, Why this step, and in one sentence where the value comes from according to the scope card. Then the visual: the four sources of value in `references/levers.md` as cards, each marked `●` likely, `◐` possible or `○` unlikely, with a reason in a few words. Call them sources of value, never levers.
 

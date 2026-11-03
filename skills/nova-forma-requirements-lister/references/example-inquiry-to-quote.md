@@ -1,6 +1,6 @@
 # Example result: inquiry to quote
 
-Figures are illustrative.
+Figures are illustrative. To keep it short, the example leaves out the tracker and the brief so far, which every step message still opens with.
 
 **Summary:** 15 requirements. Reading the request, building the price, and sending and logging carry the most.
 

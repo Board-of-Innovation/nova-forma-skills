@@ -119,7 +119,7 @@ Every step message carries at least one visual, and every result shows its pictu
 | 1 Where to look | Source chips, on or off, and the four families of work as four columns | `✓ Meetings ✓ Docs ✓ Slack ✗ Email` |
 | 1 Shortlist | Horizontal bars of each score out of 18, sorted, the suggestion in the accent, "not yet" greyed with its reason | `16/18 ▰▰▰▰▰▱` in the score column |
 | 1 Scope card | A swimlane flow, as described below | Numbered steps, as described below |
-| 2 Success definition | The statement as a highlighted card, the four tests as ticks, each measure as a today → target bar, the red lines as a fence | `Turnaround 5 days ▰▰▰▰▰ → 1 day ▰` and `⛔` before each red line |
+| 2 Success definition | The statement as a highlighted card, the four tests as ticks, each measure as a today → target bar | `Turnaround 5 days ▰▰▰▰▰ → 1 day ▰` and `⛔` before each red line |
 | 3 Requirements | A heat map of the workflow's steps against the five buckets, cells shaded by count | A count bar per bucket: `Decide ▰▰▰ 3` |
 | 4 Where the value lands | The four sources of value as cards, marked likely, possible or unlikely | `● likely ◐ possible ○ unlikely` |
 | 4 Numbers | The inputs, each tagged by where it came from | `✓ from you ≈ hypothesis ? needed` |
