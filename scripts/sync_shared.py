@@ -4,8 +4,9 @@
 
 Every skill must work on its own (a zip upload holds one skill folder), so the
 files that all four skills share live in shared/references/ and are copied,
-never symlinked, into skills/<name>/references/. The root LICENSE is copied to
-skills/<name>/LICENSE.txt the same way.
+never symlinked, into skills/<name>/references/. The root LICENSE and NOTICE
+are copied to skills/<name>/LICENSE.txt and skills/<name>/NOTICE.txt the same
+way, so every zip and install carries both.
 
 Usage:
     python3 scripts/sync_shared.py          # write the copies
@@ -22,6 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SHARED_DIR = Path("shared/references")
 LICENSE = Path("LICENSE")
+NOTICE = Path("NOTICE")
 JUNK_NAMES = {".DS_Store", "Thumbs.db", "desktop.ini"}
 
 
@@ -31,7 +33,7 @@ class Copy:
 
     source: Path
     target: Path
-    kind: str  # "shared" or "license"
+    kind: str  # "shared", "license" or "notice"
 
 
 @dataclass(frozen=True)
@@ -64,16 +66,21 @@ def planned_copies(root: Path = ROOT) -> list[Copy]:
     copies: list[Copy] = []
     sources = shared_files(root)
     has_license = (root / LICENSE).is_file()
+    has_notice = (root / NOTICE).is_file()
     for skill in skill_dirs(root):
         rel = skill.relative_to(root)
         for src in sources:
             copies.append(Copy(src, rel / "references" / src.name, "shared"))
         if has_license:
             copies.append(Copy(LICENSE, rel / "LICENSE.txt", "license"))
+        if has_notice:
+            copies.append(Copy(NOTICE, rel / "NOTICE.txt", "notice"))
     return copies
 
 
-def find_drift(root: Path = ROOT, kinds: tuple[str, ...] = ("shared", "license")) -> list[Drift]:
+def find_drift(
+    root: Path = ROOT, kinds: tuple[str, ...] = ("shared", "license", "notice")
+) -> list[Drift]:
     """Return every copy that is missing, a symlink, or different from its source."""
     drift: list[Drift] = []
     for copy in planned_copies(root):
@@ -119,13 +126,13 @@ def main(argv: list[str] | None = None) -> int:
     if args.check:
         drift = find_drift()
         if not drift:
-            print("Shared files and LICENSE copies are in sync.")
+            print("Shared files, LICENSE and NOTICE copies are in sync.")
             return 0
         print("These copies are out of sync:")
         for item in drift:
             print(f"  {item.copy.target} {item.reason}")
         print(
-            "Fix: edit the file in shared/references/ (or the root LICENSE), "
+            "Fix: edit the file in shared/references/ (or the root LICENSE or NOTICE), "
             "then run: python3 scripts/sync_shared.py"
         )
         return 1
@@ -138,7 +145,7 @@ def main(argv: list[str] | None = None) -> int:
     if any(item.reason.startswith("differs") for item in written):
         print(
             "Note: a copy inside a skill was different and has been replaced. "
-            "Edits to shared files belong in shared/references/ (or the root LICENSE)."
+            "Edits to shared files belong in shared/references/ (or the root LICENSE or NOTICE)."
         )
     return 0
 

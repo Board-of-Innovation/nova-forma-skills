@@ -25,6 +25,7 @@ skills/<skill-name>/     one folder per skill
   SKILL.md               what the skill does and how it runs
   references/            detail the skill reads when it needs it
   LICENSE.txt            a copy of the license, so each skill can travel on its own
+  NOTICE.txt             a copy of the NOTICE, for the same reason
 shared/references/       the four files every skill shares
 scripts/                 the check, sync and zip scripts
 .claude-plugin/          the plugin and marketplace manifests

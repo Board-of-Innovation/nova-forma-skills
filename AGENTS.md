@@ -29,12 +29,13 @@ Internal discussion about clients, pricing or plans belongs in Board of Innovati
 skills/<skill-name>/    one folder per skill, each one complete on its own
   SKILL.md              frontmatter plus the instructions Claude follows
   LICENSE.txt           a copy of the root LICENSE
+  NOTICE.txt            a copy of the root NOTICE
   references/           detail the skill reads when it needs it
   scripts/              code the skill runs (only the value-at-stake sizer has one)
 shared/references/      the one place to edit context.md, display.md, evidence.md, writing.md
 scripts/
   check.py              every repository check in one command
-  sync_shared.py        copies shared/references/ and LICENSE into every skill
+  sync_shared.py        copies shared/references/, LICENSE and NOTICE into every skill
   build_zips.py         builds dist/<skill-name>.zip for uploading one skill to Claude
 .github/                CI workflows, issue and pull request templates, CODEOWNERS, Dependabot
 .claude/                Claude Code settings, path rules and maintainer commands
@@ -85,7 +86,7 @@ Run this before every commit. It needs only Python 3.10 or later:
 python3 scripts/check.py
 ```
 
-It checks the frontmatter of every skill against the Agent Skills specification, that every file a skill mentions exists in that skill, that the shared files and LICENSE copies are in sync, that the manifests parse and agree, that no symlinks, junk files or zips are in the tree, that Python files carry the license header, which files `ruff.toml` keeps out of the Python lint, and the public-repo denylist: email addresses, links to internal tools, wording that marks material as private, keys and tokens, and the terms in your `.denylist.local`. Each failure says how to fix it.
+It checks the frontmatter of every skill against the Agent Skills specification, that every file a skill mentions exists in that skill, that the shared files and the LICENSE and NOTICE copies are in sync, that the manifests parse and agree, that no symlinks, junk files or zips are in the tree, that Python files carry the license header, which files `ruff.toml` keeps out of the Python lint, and the public-repo denylist: email addresses, links to internal tools, wording that marks material as private, keys and tokens, and the terms in your `.denylist.local`. Each failure says how to fix it.
 
 CI runs the same command in `.github/workflows/validate.yml` on every pull request and every push to `main`, together with these validators. Run them locally with the versions pinned in that file:
 
