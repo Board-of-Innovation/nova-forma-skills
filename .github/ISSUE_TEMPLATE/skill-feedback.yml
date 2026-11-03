@@ -1,0 +1,95 @@
+name: Skill feedback
+description: A skill gave a weak, wrong or confusing result.
+title: "Feedback: "
+labels: ["skill feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### This repository is public
+
+        Anyone can read what you write here. Don't paste confidential company data, client or customer names, personal data or real figures. Describe your case in general terms, or replace names and numbers with invented ones.
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Which skill?
+      options:
+        - "1. Pick the workflow (nova-forma-workflow-identifier)"
+        - "2. Define success (nova-forma-outcome-statement-writer)"
+        - "3. Map today's work (nova-forma-requirements-lister)"
+        - "4. Size the value (nova-forma-value-at-stake-sizer)"
+        - "The one-page brief"
+        - "Not sure, or more than one"
+    validations:
+      required: true
+  - type: textarea
+    id: asked
+    attributes:
+      label: What did you ask?
+      description: Your message, or the step where it went wrong. Use invented names and numbers.
+      placeholder: "Where should we start with AI in our sales team?"
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened?
+      description: What the skill said or did. Paste only the relevant part, with confidential details removed.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: dropdown
+    id: assistant
+    attributes:
+      label: Which assistant?
+      options:
+        - Claude on the web
+        - Claude desktop app
+        - Claude mobile app
+        - Cowork
+        - Claude Code
+        - Another assistant (say which below)
+    validations:
+      required: true
+  - type: dropdown
+    id: plan
+    attributes:
+      label: Which Claude plan?
+      options:
+        - Free
+        - Pro
+        - Max
+        - Ultra
+        - Team
+        - Enterprise
+        - Not sure, or not Claude
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How did you install the skills?
+      options:
+        - Added the marketplace in Claude
+        - Uploaded the zip files
+        - Claude Code plugin
+        - npx skills
+        - Provided by my organization
+        - Other or not sure
+  - type: input
+    id: other
+    attributes:
+      label: Anything else?
+      description: Another assistant's name, the skill version, or other details that help.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you submit
+      options:
+        - label: I removed confidential company data, client names and personal data.
+          required: true

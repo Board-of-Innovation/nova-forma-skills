@@ -1,0 +1,87 @@
+name: Install or script problem
+description: Installing the skills failed, or the value sizer's script broke.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### This repository is public
+
+        Anyone can read what you write here. Don't paste confidential company data, client names, personal data, or files and inputs with real figures. Report security problems privately, as [SECURITY.md](https://github.com/Board-of-Innovation/nova-forma-skills/blob/main/SECURITY.md) describes.
+  - type: dropdown
+    id: area
+    attributes:
+      label: What went wrong?
+      options:
+        - Adding the marketplace or the plugin in Claude
+        - Uploading a skill zip
+        - Installing in Claude Code
+        - Installing with npx skills
+        - The value sizer's script
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What you did, step by step.
+      placeholder: |
+        1. Opened Customize > Plugins
+        2. Selected Add, then Add marketplace
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened?
+      description: Include the exact error message, if there was one.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: dropdown
+    id: assistant
+    attributes:
+      label: Which assistant?
+      options:
+        - Claude on the web
+        - Claude desktop app
+        - Claude mobile app
+        - Cowork
+        - Claude Code
+        - Another assistant (say which below)
+    validations:
+      required: true
+  - type: dropdown
+    id: plan
+    attributes:
+      label: Which Claude plan?
+      options:
+        - Free
+        - Pro
+        - Max
+        - Ultra
+        - Team
+        - Enterprise
+        - Not sure, or not Claude
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Version and system
+      description: The skill or plugin version if you know it, your operating system and browser, and for Claude Code its version.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you submit
+      options:
+        - label: I removed confidential company data, client names and personal data.
+          required: true
