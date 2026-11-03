@@ -1,6 +1,10 @@
 ---
-name: "nova-forma-value-at-stake-sizer"
+name: nova-forma-value-at-stake-sizer
 description: Estimate what redesigning a workflow with AI is worth, as a value range a year. First align the value hypothesis with the user, then size it. Freed capacity only counts once it is put to use or turned into real FTE savings, next to the business impact and the value creation opportunity. Use this whenever someone asks what redesigning or automating a process with AI is worth, wants an ROI, payback, business case or value estimate for an AI use case, needs to justify a pilot, or asks "is this worth doing", even for a rough first number. Last of the four Nova Forma skills.
+license: Apache-2.0
+metadata:
+  author: Board of Innovation
+  version: "1.0.0"
 ---
 
 # Nova Forma value-at-stake sizer

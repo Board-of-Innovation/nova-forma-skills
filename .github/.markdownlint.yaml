@@ -1,0 +1,3 @@
+# GitHub templates start with a comment or a section heading, not a title.
+extends: ../.markdownlint.yaml
+MD041: false

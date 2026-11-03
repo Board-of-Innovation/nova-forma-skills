@@ -1,6 +1,10 @@
 ---
-name: "nova-forma-workflow-identifier"
+name: nova-forma-workflow-identifier
 description: Find the workflows in a team, function or business that are worth redesigning with AI, help the user pick the one to start with, and set its boundaries in a scope card with a first view of where the value comes from. Use this whenever someone asks where to start with AI, which process or workflow to redesign or automate first, how to find or prioritize AI use cases, or how to fill in an AI opportunity card, even if they never say "workflow". First of the four Nova Forma skills.
+license: Apache-2.0
+metadata:
+  author: Board of Innovation
+  version: "1.0.0"
 ---
 
 # Nova Forma workflow identifier

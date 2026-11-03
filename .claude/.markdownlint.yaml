@@ -1,0 +1,3 @@
+# Claude Code prompts (commands, CLAUDE.md) start with an instruction, not a title.
+extends: ../.markdownlint.yaml
+MD041: false

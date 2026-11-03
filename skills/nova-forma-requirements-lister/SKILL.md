@@ -1,6 +1,10 @@
 ---
-name: "nova-forma-requirements-lister"
+name: nova-forma-requirements-lister
 description: List every requirement a current workflow follows, sorted into what it must know, decide, produce, execute and monitor, with who owns each one and the step where it shows up, plus the exceptions the workflow handles. Use this whenever someone wants to map how a process really works, build an as-is inventory before a redesign or AI project, understand why a workflow has so many hand-offs, approvals or checks, or turn process documents and interview notes into a structured list, even if they just say "map our current process". Third of the four Nova Forma skills.
+license: Apache-2.0
+metadata:
+  author: Board of Innovation
+  version: "1.0.0"
 ---
 
 # Nova Forma requirements lister

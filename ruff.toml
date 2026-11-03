@@ -1,0 +1,17 @@
+# Ruff settings for the repository's Python scripts (stdlib only, Python 3.10+).
+target-version = "py310"
+line-length = 100
+include = ["*.py"]
+force-exclude = true
+extend-exclude = [
+    # Skill content, left unchanged in this harness update. The content update
+    # formats and lints it, adds its SPDX header, then removes this line.
+    "skills/nova-forma-value-at-stake-sizer/scripts/value_case.py",
+]
+
+[lint]
+select = ["E", "W", "F", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["E501"]  # the formatter handles line length; long strings stay readable
+
+[format]
+quote-style = "double"

@@ -1,0 +1,9 @@
+# Normalise line endings: text files are stored and checked out with LF.
+* text=auto eol=lf
+
+# Binary files
+*.png binary
+*.zip binary
+
+# Do not add export-ignore or filter attributes here: plugin installs and
+# Anthropic's plugin directory need the full tree (scripts/check.py enforces this).

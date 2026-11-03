@@ -1,0 +1,83 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Pinned tool versions. Bump them on purpose, in their own pull request.
+  CLAUDE_CODE_VERSION: "2.1.311"
+  MARKDOWNLINT_CLI2_VERSION: "0.24.0"
+  RUFF_VERSION: "0.17.1"
+  SKILLS_REF_VERSION: "0.1.1"
+
+jobs:
+  validate:
+    name: Checks and validators
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          version: "0.13.5"
+          enable-cache: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "24"
+
+      # The steps below run even when an earlier one fails, so one run shows every problem.
+
+      - name: Repository checks (python3 scripts/check.py)
+        if: ${{ !cancelled() }}
+        run: python3 scripts/check.py
+
+      - name: Skill zips build and verify
+        if: ${{ !cancelled() }}
+        run: python3 scripts/build_zips.py --out "$RUNNER_TEMP/dist"
+
+      - name: Agent Skills spec (skills-ref)
+        if: ${{ !cancelled() }}
+        run: |
+          status=0
+          for dir in skills/*/; do
+            uvx --from "skills-ref==${SKILLS_REF_VERSION}" agentskills validate "$dir" || status=1
+          done
+          exit "$status"
+
+      - name: Python lint (ruff check)
+        if: ${{ !cancelled() }}
+        run: uvx "ruff@${RUFF_VERSION}" check --output-format=github .
+
+      - name: Python format (ruff format --check)
+        if: ${{ !cancelled() }}
+        run: uvx "ruff@${RUFF_VERSION}" format --check .
+
+      - name: Markdown lint (markdownlint-cli2)
+        if: ${{ !cancelled() }}
+        run: npx --yes "markdownlint-cli2@${MARKDOWNLINT_CLI2_VERSION}"
+
+      - name: Plugin and marketplace (claude plugin validate --strict)
+        if: ${{ !cancelled() }}
+        env:
+          CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
+        run: |
+          # A fresh HOME proves the validator needs no login or saved settings.
+          HOME="$(mktemp -d)"
+          export HOME
+          npx --yes "@anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}" plugin validate . --strict

@@ -1,0 +1,31 @@
+# markdownlint rules for every Markdown file in the repo.
+# Tuned so the skill files pass as they are written: skills are prompts for a
+# model, and their layout is part of how they work.
+default: true
+# Long lines are normal in prose and in skill instructions.
+MD013: false
+# Skills number their steps across sections (4, 5, 6 after a heading).
+MD029: false
+# Bold lines label parts of worked examples; they are not headings.
+MD036: false
+# Plain fenced blocks show sample output in the skills.
+MD040: false
+# Changelogs repeat "Added" and "Fixed" under each version.
+MD024:
+  siblings_only: true
+# Inline HTML only for collapsible sections and simple layout.
+MD033:
+  allowed_elements:
+    - details
+    - summary
+    - b
+    - strong
+    - br
+    - kbd
+    - sup
+    - sub
+    - img
+    - picture
+    - source
+    - p
+    - a

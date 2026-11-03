@@ -1,0 +1,15 @@
+# Keeps the pinned GitHub Actions up to date. Each update arrives as a pull
+# request that changes the commit SHA and the version comment together.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: ci
+    groups:
+      github-actions:
+        patterns: ["*"]

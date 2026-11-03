@@ -1,0 +1,9 @@
+# Which files markdownlint-cli2 checks. The rules are in .markdownlint.yaml.
+# CI runs: npx markdownlint-cli2@<version> (see .github/workflows/validate.yml).
+globs:
+  - "**/*.md"
+ignores:
+  - "node_modules/**"
+  - "dist/**"
+  - ".venv/**"
+gitignore: true

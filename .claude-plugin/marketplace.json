@@ -1,0 +1,17 @@
+{
+  "name": "nova-forma-skills",
+  "owner": {
+    "name": "Board of Innovation",
+    "url": "https://novaforma.boardofinnovation.ai"
+  },
+  "metadata": {
+    "description": "The Nova Forma skills by Board of Innovation: four steps that prepare an AI-first redesign of one workflow."
+  },
+  "plugins": [
+    {
+      "name": "nova-forma",
+      "source": "./",
+      "description": "Pick the workflow, define success, map today's work and size the value, ending with a one-page brief for the redesign week."
+    }
+  ]
+}

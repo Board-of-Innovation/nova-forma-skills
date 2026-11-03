@@ -1,6 +1,10 @@
 ---
-name: "nova-forma-outcome-statement-writer"
+name: nova-forma-outcome-statement-writer
 description: Write the outcome statement of a workflow as one sentence that says who gets what result, by when or to what standard, within which constraints, backed by three to six measures, the working principles, and the red lines with their owners. Use this whenever someone wants to define the purpose, goal, outcome or north star of a process or workflow, set KPIs for it, write a problem statement before an AI project, or check whether a goal is really an outcome. Second of the four Nova Forma skills.
+license: Apache-2.0
+metadata:
+  author: Board of Innovation
+  version: "1.0.0"
 ---
 
 # Nova Forma outcome statement writer
