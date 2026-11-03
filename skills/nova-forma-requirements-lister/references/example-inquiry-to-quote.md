@@ -33,6 +33,8 @@ Where I need your input:
 - Name who owns the margin check before sending, or confirm nobody does.
 - Ask two inside sales reps how often a request arrives with missing specifications.
 
+Sources: your note, Google Drive and Gmail.
+
 ---
 
 **Appendix: all requirements by bucket**

@@ -17,7 +17,7 @@ The Nova Forma chain: 1. workflow identifier, **2. outcome statement writer** (t
 
 ## Before you write
 
-Read `references/display.md` for how every message looks, asks and draws, and `references/writing.md` for the check every message passes before it goes out. These files are the same in all four Nova Forma skills: if you read them earlier in this conversation, don't read them again. The users are business owners and managers, mostly new to AI, so every message must work without help.
+Read `references/display.md` for how every message looks, asks and draws, and `references/writing.md` for the check every message passes before it goes out. These files are the same in all four Nova Forma skills: if they are still in view from earlier in this conversation, don't read them again. The users are business owners and managers, mostly new to AI, so every message must work without help.
 
 Start every step message with the tracker from `display.md`: step 2, Define success, with the parts your calls → success definition.
 
@@ -27,9 +27,9 @@ Start every step message with the tracker from `display.md`: step 2, Define succ
 
 1. **Read the context** as `references/context.md` describes. Start from the scope card of the workflow identifier if there is one, including its four lines on what the redesign must show: effort, quality, value and the human role. Accepting the scope card confirmed them, so never ask them again. Turn each into at least one measure or red line, and keep its wording. When one needs to change, such as a target nobody can measure, keep it as it is and raise the change under Where I need your input. Show the red lines that come from these lines as already chosen, and offer only other rules in the red lines card.
 
-   **If you start here**: you need the workflow, from what starts it to what the receiver gets at the end, and who that receiver is. Ask for what is missing as `context.md` describes. The receiver card in step 3 settles who the receiver is, so ask the workflow first.
+   **If you start here**: you need the workflow, from what starts it to what the receiver gets at the end, and who that receiver is. Ask for what is missing as `context.md` describes. The receiver card below settles who the receiver is, so ask the workflow first.
 
-2. **Send the opening message**, visible before the cards: the tracker, the brief so far, Why this step, and one line on what you found, with a visual: the scope card's start and end as a simple from → to strip, with the receiver named.
+2. **Send the opening message**, visible before the cards: the tracker, the brief so far, Why this step, and one line on what you found, with a visual: the scope card's start and end as a simple from → to strip, with the receiver named, or marked "to settle below" when nothing so far names one.
 
 3. **Ask your calls in one round of question cards**, as `display.md` describes, at most four. Recommend an answer on each, with where it came from. Skip any the context already answers. Never ask for volumes, hours or costs: the value-at-stake sizer asks those.
    - **Who receives the result?** "Whose result should the new way of working improve?" Options built from the scope card, such as "The client's decision maker (Recommended)", "Our own team", "Both, with different needs". When two receivers want different results, the statement names both.
@@ -65,6 +65,6 @@ Send it as one visible message, in this order:
 6. **How we use this**, in one line: "In the redesign week, each new way of working is scored on these measures, and any that breaks a red line is out."
 7. **Where I need your input**: review the statement and share feedback, then each open point, such as a target to confirm, a measure nobody tracks yet, or a change to one of the scope card's four lines.
 
-Then ask the next step in a question card: "Is this the right definition of success?" Options: "Yes, go to step 3: map today's work (Recommended)" and "Adjust the statement first". Without cards, end with "Reply Accept to go to step 3, or Adjust with your changes." On accept, continue with step 3, Map today's work, by following the nova-forma-requirements-lister skill. If that skill is not available here, say so in one line, give everything accepted so far as one block the user can paste into a new chat, and say the four Nova Forma skills are at <https://github.com/Board-of-Innovation/nova-forma-skills>. That block holds the success definition, plus the scope card with What the redesign must show where this chat has one, or else the workflow's start and end.
+Then ask the next step in a question card: "Is this the right definition of success?" Options: "Yes, go to step 3: map today's work (Recommended)" and "Adjust the statement first". Without cards, end with "Reply Accept to go to step 3, or Adjust with your changes." On accept, continue with step 3, Map today's work, by following the nova-forma-requirements-lister skill. If that skill is not available here, say so in one line and give everything accepted so far as one block the user can paste into a new chat. It opens with a line such as "Nova Forma step 3: map today's work for this workflow.", then holds the success definition, plus the scope card with its numbered steps and What the redesign must show where this chat has one, or else the workflow's start and end. Leave out the sources line. Then say the four Nova Forma skills are at <https://github.com/Board-of-Innovation/nova-forma-skills>.
 
 `references/examples.md` shows two results.
