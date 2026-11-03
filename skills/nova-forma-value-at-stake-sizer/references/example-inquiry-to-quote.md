@@ -20,14 +20,14 @@ The user answers: yes, small ones are turned away; more quotes, and fewer hires 
 
 | # | Input | Value | Source |
 | --- | --- | --- | --- |
-| 1 | Team hours on quoting | ? | ? needed |
+| 1 | Team on quoting: hours a week, people, quotes sent a week | ? | ? needed |
 | 2 | Share of hours AI could take over | 30% to 60% | ≈ hypothesis, from the kind of work |
 | 3 | Requests declined a year | ? | ? needed |
 | 4 | Win rate, order value, margin on small requests | ? | ? needed |
 | 5 | Freed hours to quotes or fewer hires | 60% quotes, 40% fewer hires | ≈ hypothesis, from your answer |
-| 6 | Discount leakage avoided | EUR 200k to 400k | ≈ hypothesis, from the pricing log sample |
-| 7 | Win rate gain on today's quotes from faster turnaround | EUR 0 to 150k | ≈ hypothesis |
-| 8 | Build and yearly cost | EUR 250k to 400k, EUR 60k to 100k | ≈ placeholder until IT quotes |
+| 6 | Discount leakage avoided, and a win rate gain on today's quotes from faster turnaround | EUR 200k to 400k, and EUR 0 to 150k | ≈ hypothesis, leakage from the pricing log sample |
+| 7 | Build and yearly cost | EUR 250k to 400k, EUR 60k to 100k | ≈ placeholder until IT quotes |
+| 8 | Revenue a year | EUR 150M | ✓ from you, the annual report in your Drive |
 
 Rows 3 and 6 move the case most: declined requests cap the extra quotes, and leakage carries half the low case.
 
@@ -41,9 +41,11 @@ Rows 3 and 6 move the case most: declined requests cap the extra quotes, and lea
 **Cards, round 2**
 
 - Header "Margin". "What margin do you keep on a small order, after delivery costs?" Options: "Under 15%", "15% to 25% (Recommended)", "25% to 35%", "Over 35%".
+- Header "Team". "How many people work on quotes, counted as full-time?" Options: "Under 5", "5 to 10 (Recommended)", "10 to 20", "More than 20".
+- Header "Quotes". "Roughly how many quotes does the team send a week today?" Options: "Under 50", "50 to 100", "100 to 200 (Recommended)", "More than 200".
 - Header "The rest". "Shall I use my hypotheses for the rest?" Options: "Yes, use them and mark them (Recommended)", "No, I'll correct a row".
 
-The user types 246 hours a week and 1,200 declined requests, picks 15% to 25% and EUR 5,000, types a 25% margin, and keeps the hypotheses. An extra quote takes about 2 hours: 246 hours a week over about 120 quotes.
+The user types 246 hours a week and 1,200 declined requests, picks 15% to 25% and EUR 5,000, types a 25% margin, a team of 8 and about 120 quotes a week, and keeps the hypotheses. An extra quote takes about 2 hours: 246 hours a week over about 120 quotes. At 46 working weeks, that is about 11,300 hours and 5,500 quotes a year.
 
 ## Moment 3: the result
 
