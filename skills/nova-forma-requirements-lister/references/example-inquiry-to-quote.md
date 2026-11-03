@@ -2,9 +2,9 @@
 
 Figures are illustrative.
 
-**Summary:** 17 requirements. Reading the request, building the price, and sending and logging take the most time.
+**Summary:** 15 requirements. Reading the request, building the price, and sending and logging carry the most.
 
-[Visual: a heat map titled "Reading, pricing and sending carry most of the work". Rows: Know, Decide, Produce, Do, Check. Columns: the six steps of the scope card's swimlane, from read the request to send and log. Cells shaded by count; the heaviest cells in read the request, build the price, and send and log in the accent.]
+[Visual: a heat map titled "Reading, pricing and sending carry most requirements". Rows: Know, Decide, Produce, Do, Check. Columns: the six steps of the scope card's swimlane, from read the request to send and log. Cells shaded by count; the heaviest cells in read the request, build the price, and send and log in the accent.]
 
 | Requirement | By whom | Step |
 | --- | --- | --- |
@@ -14,8 +14,7 @@ Figures are illustrative.
 | Produce: the request typed again into the quoting worksheet | Inside sales | Read the request |
 | Produce: a priced draft within the discount rules | Pricing manager | Build the price |
 | Do: the quote logged in the ERP and the CRM | Inside sales | Send and log |
-| Check: margin checked once more before sending, in no procedure | Unknown | Send and log |
-| Check: wins and losses tracked | Nobody today | Send and log |
+| Check: margin checked once more before sending, in no procedure | Unknown, to confirm | Send and log |
 
 | Source | Exception and how often | Step | Handled by |
 | --- | --- | --- | --- |
@@ -26,7 +25,7 @@ Figures are illustrative.
 | Clock | A rush request; unmeasured | Read the request | Inside sales |
 | Format | The customer's own quote form; unmeasured | Send and log | Inside sales |
 
-How we use this: in the redesign week, each requirement gets one verdict against the result, and each one that stays gets an owner: a person, AI with a person checking, or AI alone.
+How we use this: in the redesign week, each requirement gets one verdict against the result. Each one that stays gets an owner: a person, AI with a person checking, or AI alone.
 
 Where I need your input:
 
@@ -78,9 +77,7 @@ For reference, no action needed.
 | Requirement | By whom | Step |
 | --- | --- | --- |
 | Margin checked against the floor on a sample | Pricing manager | Build the price |
-| Margin checked once more before sending, in no procedure | Unknown | Send and log |
-| Quote status chased by phone and email | Inside sales | Send and log |
-| Wins and losses tracked | Nobody today | Send and log |
+| Margin checked once more before sending, in no procedure | Unknown, to confirm | Send and log |
 
 **Next card**
 

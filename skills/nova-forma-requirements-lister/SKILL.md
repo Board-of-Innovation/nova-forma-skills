@@ -1,6 +1,6 @@
 ---
 name: nova-forma-requirements-lister
-description: List every requirement a current workflow follows, sorted into what it must know, decide, produce, execute and monitor, with who owns each one and the step where it shows up, plus the exceptions the workflow handles. Use this whenever someone wants to map how a process really works, build an as-is inventory before a redesign or AI project, understand why a workflow has so many hand-offs, approvals or checks, or turn process documents and interview notes into a structured list, even if they just say "map our current process". Third of the four Nova Forma skills.
+description: List every requirement a workflow follows today, sorted into what it must know, decide, produce, do and check, with who owns each one, the step where it shows up, and the exceptions it handles. Use when someone plans to redesign or automate a specific workflow with AI and wants to map how it really runs today, build an as-is inventory before the redesign, see why it has so many hand-offs, approvals or checks, or turn its process documents and interview notes into a requirements list. Not for drawing flowcharts or BPMN diagrams, or writing SOPs. Step 3 of the four Nova Forma skills.
 license: Apache-2.0
 metadata:
   author: Board of Innovation
@@ -11,7 +11,7 @@ metadata:
 
 Lists everything the workflow requires today, as it runs now: what it must know, decide, produce, do and check, who owns each part, and the cases that leave the normal path. The list describes and never judges, because a redesign needs to see the habits too.
 
-This skill runs the first part of the recipe's third phase: the requirements in five buckets and the exceptions. Each requirement gets its verdict later, in the redesign week.
+This skill runs step 3 of the Nova Forma intake: list the requirements in five buckets, with their owners and steps, and the exceptions. Each requirement gets its verdict later, in the redesign week.
 
 The Nova Forma chain: 1. workflow identifier, 2. outcome statement writer, **3. requirements lister** (this skill), 4. value-at-stake sizer.
 
@@ -21,13 +21,15 @@ Read `references/display.md` for how every message looks, asks and draws, and `r
 
 Start every reply with the tracker from `display.md`: step 3, Map today's work, with the parts your calls → requirements.
 
-**Why this step**, to say when it opens: "A redesign starts from what the work needs. With every requirement listed, with its owner and where it shows up, we can test each one against the result: keep it, combine it, move it or drop it. The odd cases decide whether a new way of working holds up in real life."
+**Why this step**, to say when it opens: "A redesign starts from what the work needs. With every requirement listed, its owner and where it shows up, we can test each one against the result. Then we keep it, combine it, move it or drop it. The odd cases decide whether a new way of working holds up in real life."
 
-The five buckets are what the work must **know**, **decide**, **produce**, **do** and **check**. Use these plain names everywhere the user looks, tables included. They are the recipe's Know, Decide, Produce, Execute and Monitor.
+The five buckets are what the work must **know**, **decide**, **produce**, **do** and **check**. Use these plain names everywhere the user looks, tables included.
 
 ## How it runs
 
 1. **Read the context** as `references/context.md` describes. The scope card and the outcome statement set the boundary: nothing before what starts the workflow, nothing after what the receiver gets.
+
+   **If you start here**: you need the workflow, with what starts it, what it ends with and who receives the result, plus the outcome statement if there is one.
 
 2. **Send the opening message**, visible before the cards: the tracker, the brief so far, Why this step, and one line on what you found and where, with a visual: the workflow's steps as a strip, each marked by how much evidence you have, so the user sees where the gaps are.
 
@@ -48,21 +50,21 @@ The five buckets are what the work must **know**, **decide**, **produce**, **do*
 
 Send it as one visible message, in this order:
 
-1. **Summary**: one line with the number of requirements, and the three that take the most time.
+1. **Summary**: one line with the number of requirements, and the three steps that carry the most requirements.
 2. **The visual**: a heat map of the workflow's steps against the five buckets, cells shaded by count, the three heaviest cells in the accent.
 3. **The requirements that matter most**: one table with five to eight rows, at least one per bucket, each prefixed with its bucket. Columns:
    - Requirement: one line, in the words of the people who do the work.
-   - By whom: the person or role who owns it today, or "Nobody today".
+   - By whom: the person or role who owns it today, "Nobody today" when no one owns it, or "Unknown, to confirm" when the evidence does not say.
    - Step: where it shows up.
 4. **Exceptions**: one table with four columns:
    - Source: law, rules, input, case, clock or format.
    - Exception and how often: the case, and its share, or "unmeasured".
    - Step: where it enters the workflow.
    - Handled by: who deals with it today.
-5. **How we use this**: "In the redesign week, each requirement gets one verdict against the result, and each one that stays gets an owner: a person, AI with a person checking, or AI alone."
+5. **How we use this**: "In the redesign week, each requirement gets one verdict against the result. Each one that stays gets an owner: a person, AI with a person checking, or AI alone."
 6. **Where I need your input**: review the list and share feedback, then each open point: a requirement with no owner or reason, sources that contradict each other, or a short set of questions to forward to the people who do the work.
 7. **Appendix: all requirements by bucket**, after a horizontal rule and "For reference, no action needed.": one table per bucket, same three columns. Where the environment can attach a file or a collapsed section, use that instead.
 
-Then ask the next step in a question card: "Does this match how the work really runs?" Options: "Yes, go to step 4: size the value (Recommended)" and "Adjust the list first". Without cards, put the question in a quote block before the appendix and repeat it as the last line: "Reply Accept to go to step 4, or Adjust with your changes." On accept, launch nova-forma-value-at-stake-sizer.
+Then ask the next step in a question card: "Does this match how the work really runs?" Options: "Yes, go to step 4: size the value (Recommended)" and "Adjust the list first". Without cards, put the question in a quote block before the appendix and repeat it as the last line: "Reply Accept to go to step 4, or Adjust with your changes." On accept, continue with step 4, Size the value, by following the nova-forma-value-at-stake-sizer skill. If that skill is not available here, say so in one line, give the accepted requirements and exceptions as one block the user can paste into a new chat, and say the four Nova Forma skills are at <https://github.com/Board-of-Innovation/nova-forma-skills>.
 
 `references/example-inquiry-to-quote.md` shows a result.
