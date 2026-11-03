@@ -27,7 +27,7 @@ E3. Only 37% of firms report any EBIT impact from AI. About 6% get 5% or more of
 [McKinsey, The state of AI in 2026, 2026, survey, https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai]
 Use it to: temper EBIT promises in a value case.
 
-E4. The authors found 95% of organizations getting zero return from gen AI. In their sample, partnered builds reached deployment about twice as often as internal ones (67% against 33%, self-reported).
+E4. The authors found 95% of organizations getting zero return from gen AI. In their interviews with 52 organizations, external partnerships with customized tools reached deployment about twice as often as tools built in-house (67% against 33%, self-reported).
 [MIT NANDA, The GenAI Divide: State of AI in Business 2025, 2025, preliminary survey and interviews, https://web.archive.org/web/20250818145714/https://nanda.media.mit.edu/ai_report_2025.pdf]
 Use it to: steer small firms toward partners, as a direction only.
 
