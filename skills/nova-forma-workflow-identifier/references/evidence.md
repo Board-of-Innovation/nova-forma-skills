@@ -42,7 +42,7 @@ E6. Inside AI's frontier, consultants did 12% more tasks, 25% faster, at over 40
 Use it to: test each step before applying any gain.
 
 E7. An AI assistant raised support agents' resolutions per hour by 15% on average, and by about 30% for less-skilled and newer agents. The most experienced gained little.
-[Quarterly Journal of Economics, Generative AI at Work, 2025, study, https://doi.org/10.1093/qje/qjae044]
+[Quarterly Journal of Economics, Generative AI at Work, 2025, study, https://doi.org/10.1093/qje/qjae044, open version https://arxiv.org/abs/2304.11771]
 Use it to: anchor service gains near 15%.
 
 E8. ChatGPT cut time on professional writing tasks by 40% and raised quality by 18%.
@@ -77,7 +77,7 @@ Use it to: replace self-reported savings with timed cases.
 
 E14. In 2025, large North American automotive suppliers won 49% of new-business bids, up from 25% in 2002. Each quote request took about 157 labor hours, up from 134.
 [Center for Automotive Research, Automotive Suppliers and the Revenue Acquisition Process, Then and Now: 2025 Update, 2025, survey (sponsored by UHY Consulting), https://uhy-us.com/media/oasdkqcd/automotive-suppliers-and-the-ra-process-2025-final.pdf]
-Use it to: frame hours lost on failed bids, still about half of new-business quotes.
+Use it to: frame hours lost on failed bids. About half of new-business quotes still fail, and 157 hours is the average across all quote types.
 
 E15. At Teknorot, an automotive supplier, machine learning estimated part costs from drawings with about 10% average error.
 [Boğaziçi University, Machine Learning-Based Manufacturing Cost Prediction from 2D Engineering Drawings via Geometric Features, 2025, study, https://arxiv.org/abs/2508.12440v1]
@@ -109,7 +109,7 @@ Also see E7.
 
 E20. Best-in-class AP teams spend about $2.65 per invoice, against a $12.42 average.
 [Ardent Partners, The State of ePayables 2025, 2025, benchmark (vendor-sponsored), https://tradeshift.com/state-of-epayables-2025-report/]
-Use it to: size invoice savings without user cost data.
+Use it to: compare the user's cost per invoice with peers, never as an input.
 
 E21. Best-in-class AP teams flag about 9% of invoices as exceptions, 59% fewer than peers.
 [Ardent Partners, AP Performance Advantages of Best-in-Class, 2024, benchmark (vendor-sponsored), https://payablesplace.ardentpartners.com/2024/09/ap-performance-advantages-of-best-in-class/]
@@ -135,7 +135,7 @@ Use it to: back AI drafting with expert sign-off.
 
 ### Hiring
 
-E26. At a recruitment firm in the Philippines, 70,000 customer-service applicants got an AI or a human interviewer at random. AI interviews raised offers 12%, job starts 18% and one-month retention 18%. Recruiters made every hiring decision. The lead author later took an unpaid role at the firm.
+E26. At a recruitment firm in the Philippines, about 67,000 customer-service applications were assigned at random to an AI interviewer, a human one, or a free choice. Against human interviews, AI interviews raised offers 12%, job starts 18% and the share still in the job a month later 18%. Among applicants who accepted an offer, one-month retention rose 6%. Recruiters made every hiring decision. The lead author later took an unpaid role at the firm.
 [Carnegie Mellon University and Erasmus University Rotterdam, Voice AI in Firms, 2026, field experiment, https://arxiv.org/abs/2607.28222]
 Use it to: back AI screening for high-volume, entry-level roles.
 
@@ -148,7 +148,7 @@ Use it to: size close redesign in days saved.
 ## 6. Firms like yours
 
 E28. In 2025, 17% of small, 30% of medium and 55% of large EU firms used AI. Small means 10 to 49 people; smaller firms were not surveyed.
-[Eurostat, Use of artificial intelligence in enterprises, 2025, survey, https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises]
+[Eurostat, Use of artificial intelligence in enterprises (December 2025 edition), 2025, survey, https://web.archive.org/web/20260214092733/https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises]
 Use it to: show small-firm peers are still early.
 
 E29. Three in four SMEs using AI are novices applying off-the-shelf tools to isolated tasks. In Japan, 23% of firm-wide users saw transformational impact, against 2% of isolated-task users.
