@@ -1,6 +1,6 @@
 ---
 name: nova-forma-outcome-statement-writer
-description: Write the outcome statement of a workflow as one sentence that says who gets what result, by when or to what standard, within which constraints, backed by three to six measures, the working principles, and the red lines with their owners. Use this whenever someone wants to define the purpose, goal, outcome or north star of a process or workflow, set KPIs for it, write a problem statement before an AI project, or check whether a goal is really an outcome. Second of the four Nova Forma skills.
+description: Write the outcome statement of a workflow as one sentence that says who gets what result, by when or to what standard, within which constraints, backed by three to six measures, the working principles, and the red lines with their owners. Use when someone wants to define the purpose, goal, outcome or north star of a specific workflow they plan to redesign or automate with AI, set the measures or KPIs that prove it, or check whether its goal is really an outcome. Not for team or company KPIs in general. Step 2 of the four Nova Forma skills.
 license: Apache-2.0
 metadata:
   author: Board of Innovation
@@ -11,23 +11,25 @@ metadata:
 
 Writes one sharp outcome statement for a workflow: who gets what result, by when or to what standard, within which limits. Every later choice traces back to it.
 
-This skill runs the outcome part of the recipe's second phase: the statement, its four tests, the measures, the principles and the red lines.
+This skill runs step 2 of the Nova Forma intake: the statement, its four tests, the measures, the principles and the red lines.
 
 The Nova Forma chain: 1. workflow identifier, **2. outcome statement writer** (this skill), 3. requirements lister, 4. value-at-stake sizer.
 
 ## Before you write
 
-Read `references/display.md` for how every message looks, asks and draws, and `references/writing.md` for the check every message passes before it goes out. The users are business owners and managers, mostly new to AI, so every message must work without help.
+Read `references/display.md` for how every message looks, asks and draws, and `references/writing.md` for the check every message passes before it goes out. These files are the same in all four Nova Forma skills: if they are still in view from earlier in this conversation, don't read them again. The users are business owners and managers, mostly new to AI, so every message must work without help.
 
-Start every reply with the tracker from `display.md`: step 2, Define success, with the parts your calls → success definition.
+Start every step message with the tracker from `display.md`: step 2, Define success, with the parts your calls → success definition.
 
 **Why this step**, to say when it opens: "This sets the yardstick for the redesign: work that serves the result stays, and work that only exists because systems don't connect goes. The measures and red lines then help us pick between the new ways of working we design."
 
 ## How it runs
 
-1. **Read the context** as `references/context.md` describes. Start from the scope card of the workflow identifier if there is one. When there is none, ask its core question first, as `context.md` describes.
+1. **Read the context** as `references/context.md` describes. Start from the scope card of the workflow identifier if there is one, including its four lines on what the redesign must show: effort, quality, value and the human role. Accepting the scope card confirmed them, so never ask them again. Turn each into at least one measure or red line, and keep its wording. When one needs to change, such as a target nobody can measure, keep it as it is and raise the change under Where I need your input. Show the red lines that come from these lines as already chosen, and offer only other rules in the red lines card.
 
-2. **Send the opening message**, visible before the cards: the tracker, the brief so far, Why this step, and one line on what you found, with a visual: the scope card's start and end as a simple from → to strip, with the receiver named.
+   **If you start here**: you need the workflow, from what starts it to what the receiver gets at the end, and who that receiver is. Ask for what is missing as `context.md` describes. The receiver card below settles who the receiver is, so ask the workflow first.
+
+2. **Send the opening message**, visible before the cards: the tracker, the brief so far, Why this step, and one line on what you found, with a visual: the scope card's start and end as a simple from → to strip, with the receiver named, or marked "to settle below" when nothing so far names one.
 
 3. **Ask your calls in one round of question cards**, as `display.md` describes, at most four. Recommend an answer on each, with where it came from. Skip any the context already answers. Never ask for volumes, hours or costs: the value-at-stake sizer asks those.
    - **Who receives the result?** "Whose result should the new way of working improve?" Options built from the scope card, such as "The client's decision maker (Recommended)", "Our own team", "Both, with different needs". When two receivers want different results, the statement names both.
@@ -39,7 +41,7 @@ Start every reply with the tracker from `display.md`: step 2, Define success, wi
      - "Guidance without roadblocks": checks flag gaps and risks, and only red lines block.
      - "Reduce work, don't shift it": time saved in one role does not move to another.
 
-     The recipe's fifth starter card, what stays human-only, is answered by the red lines card.
+     Do not ask separately what stays human-only: the red lines card covers it.
 
 4. **Write the statement** with one pattern: who gets what result, by when or to what standard, within which limits. One statement per workflow.
 
@@ -49,7 +51,7 @@ Start every reply with the tracker from `display.md`: step 2, Define success, wi
    - Stop: someone outside the team would notice if the workflow stopped.
    - Measurable: three to six measures prove it.
 
-6. **Add the measures and red lines.** Three to six measures, each with today, a target and where it is measured, or "unmeasured". Typical ones: elapsed time, hours of the scarcest people per case, quality at first review, win or conversion rate, price held. Red lines are rules a new way of working may never break, each with an owner. Savings belong in the business case, never in the statement.
+6. **Add the measures and red lines.** Three to six measures, each with today, a target and where it is measured, or "unmeasured". Typical ones: elapsed time, hours of the scarcest people per case, quality at first review, win or conversion rate, price held. To show a target is realistic, cite at most one finding from `references/evidence.md`, by its rules, and only when it fits. Red lines are rules a new way of working may never break, each with an owner. Savings belong in step 4, Size the value, never in the statement.
 
 ## The result
 
@@ -57,12 +59,12 @@ Send it as one visible message, in this order:
 
 1. **The statement**, on its own, as a highlighted card where the environment can draw, otherwise as a quote block.
 2. **Tests**: four ticks, such as `Receiver ✓ Solution-free ✓ Stop ✓ Measurable ✓`.
-3. **Measures**: the visual first, each measure as a today → target bar, then a table with Measure, Today, Target and Source.
+3. **Measures**: the visual first, each measure as a today → target bar, then a table with Measure, Today, Target and Source, then, if one fits, the finding in one line under the table.
 4. **Principles**: the chosen principles, one line each.
-5. **Red lines**: the visual as a fence the new way of working stays inside, then a table with Red line and Owner, each marked `⛔`.
-6. **How we use this**: "These measures and red lines are the scorecard for picking the best new way of working: each option is scored on the measures, and any option that breaks a red line is out." Show it as a mini scorecard: the measures as rows, options A, B and C as empty columns, and a last row "Breaks a red line?".
-7. **Where I need your input**: review the statement and share feedback, then each open point, such as a target to confirm or a measure nobody tracks yet.
+5. **Red lines**: a table with Red line and Owner, each marked `⛔`.
+6. **How we use this**, in one line: "In the redesign week, each new way of working is scored on these measures, and any that breaks a red line is out."
+7. **Where I need your input**: review the statement and share feedback, then each open point, such as a target to confirm, a measure nobody tracks yet, or a change to one of the scope card's four lines.
 
-Then ask the next step in a question card: "Is this the right definition of success?" Options: "Yes, go to step 3: map today's work (Recommended)" and "Adjust the statement first". Without cards, end with "Reply Accept to go to step 3, or Adjust with your changes." On accept, launch nova-forma-requirements-lister.
+Then ask the next step in a question card: "Is this the right definition of success?" Options: "Yes, go to step 3: map today's work (Recommended)" and "Adjust the statement first". Without cards, end with "Reply Accept to go to step 3, or Adjust with your changes." On accept, continue with step 3, Map today's work, by following the nova-forma-requirements-lister skill. If that skill is not available here, say so in one line and give everything accepted so far as one block the user can paste into a new chat. It opens with a line such as "Nova Forma step 3: map today's work for this workflow.", then holds the success definition, plus the scope card with its numbered steps and What the redesign must show where this chat has one, or else the workflow's start and end. Leave out the sources line. Then say the four Nova Forma skills are at <https://github.com/Board-of-Innovation/nova-forma-skills>.
 
 `references/examples.md` shows two results.

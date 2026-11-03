@@ -13,7 +13,7 @@ The addressable share is the part of today's hours that a redesign could remove 
 1. Split the baseline hours by kind of work. A requirements list or a few interviews are enough for a rough split.
 2. For the high case, agree a share for each kind with the user, within the guide above. Multiply each kind's hours by its share and add them up. Mark every share as a hypothesis.
 3. For the low case, take about half of the high case, because adoption is partial and early estimates shrink.
-4. Check the result against the public findings in `evidence.md`, such as the 40% time cut on drafting tasks (E8) and the 14% gain in support resolutions (E7). A case far above them needs a strong reason.
+4. Check the result against the public findings in `evidence.md`, such as the 40% time cut on drafting tasks (E8) and the 15% gain in support resolutions (E7). A case far above them needs a strong reason.
 
 ## Signs of enabling work
 

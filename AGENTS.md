@@ -29,12 +29,13 @@ Internal discussion about clients, pricing or plans belongs in Board of Innovati
 skills/<skill-name>/    one folder per skill, each one complete on its own
   SKILL.md              frontmatter plus the instructions Claude follows
   LICENSE.txt           a copy of the root LICENSE
+  NOTICE.txt            a copy of the root NOTICE
   references/           detail the skill reads when it needs it
   scripts/              code the skill runs (only the value-at-stake sizer has one)
 shared/references/      the one place to edit context.md, display.md, evidence.md, writing.md
 scripts/
   check.py              every repository check in one command
-  sync_shared.py        copies shared/references/ and LICENSE into every skill
+  sync_shared.py        copies shared/references/, LICENSE and NOTICE into every skill
   build_zips.py         builds dist/<skill-name>.zip for uploading one skill to Claude
 .github/                CI workflows, issue and pull request templates, CODEOWNERS, Dependabot
 .claude/                Claude Code settings, path rules and maintainer commands
@@ -72,7 +73,7 @@ Each skill reads what the earlier steps produced in the conversation and ends by
 
 - **Keep each skill self-contained.** Every file a skill mentions lives in its own folder, because a zip upload holds one skill folder and nothing else. No `../` paths and no links into another skill. Keep `SKILL.md` under 500 lines and move detail into `references/`.
 - **Give every host-specific feature a plain-text fallback.** Question cards, inline forms, drawn visuals and file attachments exist only in some apps. Wherever a skill uses one, it also says what to do without it, such as "Without cards, end with: Reply Accept to go to step 2."
-- **Scripts in skills** use only the Python standard library, make no network calls, and are called by a path relative to `SKILL.md`, such as `scripts/value_case.py`.
+- **Scripts in skills** use only the Python standard library, run on Python 3.9 or later (a Mac's system Python), make no network calls, and are called by a path relative to `SKILL.md`, such as `scripts/value_case.py`.
 - **Python files** start with `# SPDX-License-Identifier: Apache-2.0`, on the second line when the first is a `#!` line.
 - **Write plain English** for business owners and managers who are new to AI, following `shared/references/writing.md`. Use no em or en dashes: use a comma, a colon or a full stop.
 - **Maintainer helpers for Claude Code** go in `.claude/commands/`, never in `.claude/skills/`, because `npx skills` would offer those to end users.
@@ -85,7 +86,7 @@ Run this before every commit. It needs only Python 3.10 or later:
 python3 scripts/check.py
 ```
 
-It checks the frontmatter of every skill against the Agent Skills specification, that every file a skill mentions exists in that skill, that the shared files and LICENSE copies are in sync, that the manifests parse and agree, that no symlinks, junk files or zips are in the tree, that Python files carry the license header, which files `ruff.toml` keeps out of the Python lint, and the public-repo denylist: email addresses, links to internal tools, wording that marks material as private, keys and tokens, and the terms in your `.denylist.local`. Each failure says how to fix it.
+It checks the frontmatter of every skill against the Agent Skills specification, that every file a skill mentions exists in that skill, that the shared files and the LICENSE and NOTICE copies are in sync, that the manifests parse and agree, that no symlinks, junk files or zips are in the tree, that Python files carry the license header, which files `ruff.toml` keeps out of the Python lint, and the public-repo denylist: email addresses, links to internal tools, wording that marks material as private, keys and tokens, and the terms in your `.denylist.local`. Each failure says how to fix it.
 
 CI runs the same command in `.github/workflows/validate.yml` on every pull request and every push to `main`, together with these validators. Run them locally with the versions pinned in that file:
 
@@ -95,6 +96,7 @@ uvx ruff@0.17.1 check . && uvx ruff@0.17.1 format --check .
 npx --yes markdownlint-cli2@0.24.0
 npx --yes @anthropic-ai/claude-code@2.1.311 plugin validate . --strict
 python3 scripts/build_zips.py
+uv run --no-project --python 3.9 -- python -I skills/nova-forma-value-at-stake-sizer/scripts/value_case.py skills/nova-forma-value-at-stake-sizer/references/example-inputs.json
 ```
 
 Never weaken a check or a lint rule to make a failure go away. In Claude Code, `/check` runs everything and explains each failure, and `/public-review` reviews a change against the rules above.

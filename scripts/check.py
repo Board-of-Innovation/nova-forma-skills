@@ -114,10 +114,6 @@ RULE_FILES = (
 REVIEWED_ALLOW = (
     (
         "skills/nova-forma-outcome-statement-writer/references/examples.md",
-        "Nothing confidential crosses opportunities.",
-    ),
-    (
-        "skills/nova-forma-outcome-statement-writer/references/examples.md",
         "No other client's confidential data in any draft",
     ),
 )
@@ -656,7 +652,9 @@ def check_skill_paths(skills: list[Path]) -> Section:
         texts = [
             p
             for p in sorted(skill.rglob("*"))
-            if p.is_file() and p.suffix in TEXT_SUFFIXES_IN_SKILLS and p.name != "LICENSE.txt"
+            if p.is_file()
+            and p.suffix in TEXT_SUFFIXES_IN_SKILLS
+            and p.name not in ("LICENSE.txt", "NOTICE.txt")
         ]
         for path in texts:
             rel = path.relative_to(ROOT)
@@ -704,7 +702,9 @@ def check_shared() -> Section:
 
 
 def check_license_copies() -> Section:
-    section = Section("LICENSE copies (each skills/*/LICENSE.txt equals LICENSE)")
+    section = Section(
+        "LICENSE and NOTICE copies (each skills/*/LICENSE.txt and NOTICE.txt equal the root files)"
+    )
     license_file = ROOT / "LICENSE"
     if not license_file.is_file():
         section.skipped = "no LICENSE at the repo root yet, so there is nothing to compare"
@@ -715,7 +715,12 @@ def check_license_copies() -> Section:
             "LICENSE does not look like the Apache License 2.0",
             "restore it with: gh api licenses/apache-2.0 --jq .body > LICENSE",
         )
-    for item in sync_shared.find_drift(ROOT, kinds=("license",)):
+    if not (ROOT / "NOTICE").is_file():
+        section.error(
+            "NOTICE is missing at the repo root",
+            "restore it: it carries the MIT notice for the adapted writing rules",
+        )
+    for item in sync_shared.find_drift(ROOT, kinds=("license", "notice")):
         section.error(f"{item.copy.target} {item.reason}", "run: python3 scripts/sync_shared.py")
     return section
 

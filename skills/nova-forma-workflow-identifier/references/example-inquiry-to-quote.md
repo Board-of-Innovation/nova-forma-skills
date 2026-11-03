@@ -12,9 +12,9 @@ Figures are illustrative. The user runs a mid-size industrial firm, has connecte
 
 A redesign takes a week of your team's time, so it should go where AI can change the result most. We pick one workflow, with a clear start and finish, and someone who can decide.
 
-I can look through what this assistant already knows about your work: your note, and the tools you have connected, here Gmail and Google Drive. You decide which of these I may use. Your note mentions slow quotes and late documentation packs, so I'd start in commercial work.
+I have read your note. I can also look through the tools you have connected, here Gmail and Google Drive, and I'll open only the ones you pick. Your note mentions slow quotes and late documentation packs, so I'd start in commercial work.
 
-[Visual: source chips `✓ Your note ✓ Google Drive ✓ Gmail`, then the four families as four columns: Commercial, Operational, Support functions, Management, each listing its four areas, Commercial in the accent.]
+[Visual: source chips, Your note on, Google Drive and Gmail off until you pick them, then the four families as four columns: Commercial, Operational, Support functions, Management, each listing its four areas, Commercial in the accent.]
 
 **Round 1, one card**
 
@@ -32,8 +32,10 @@ The user picks Commercial and Operational.
 
 - "Within commercial work, which part should I look at? Pick one or more." Options: "Quote and propose (Recommended)" with "Inquiry to quote, RFP to proposal. Your note names slow quotes.", "Close and onboard" with "Order to confirmation, contract to signature.", "Find and qualify leads", "Serve and grow accounts".
 - "Within operational work, which part should I look at? Pick one or more." Options: "Make or deliver (Recommended)" with "Includes documentation packs, named in your note.", "Plan the work", "Buy", "Ship and service".
-- "Where may I look for signs of slow or painful work? Pick one or more." Options: "Your note and Google Drive (Recommended)" with "Process files and quote templates.", "Gmail" with "Quote requests and chasers. The most personal source."
+- "Where may I look for signs of slow or painful work? Pick one or more." Options: "Google Drive (Recommended)" with "Process files and quote templates.", "Gmail" with "Quote requests and chasers. The most personal source.", "Only this chat" with "I use your note and your answers only."
 - "Is any work off limits, or already decided?" Options: "Nothing, search freely (Recommended)", "Leave out work already being changed".
+
+The user picks Quote and propose, Close and onboard, Make or deliver, Google Drive and Gmail, and nothing off limits.
 
 ## Moment 2: the shortlist
 
@@ -45,9 +47,9 @@ The user picks Commercial and Operational.
 
 Six checks show where value leaks today, and whether someone can act on it.
 
-[Visual: horizontal bars out of 18, sorted. Inquiry to quote 17 in the accent; Order entry 15; Documentation packs 14, greyed, "not yet: no owner"; Contract to signature 12; Lead qualification 9, greyed, "not yet: no evidence".]
-
 **My suggestion:** start with inquiry to quote. Small requests are declined today, so it loses money every month. It beats order entry, which is slow to type but rarely loses an order.
+
+[Visual: horizontal bars out of 18, sorted. Inquiry to quote 17 in the accent; Order entry 15; Documentation packs 14, greyed, "not yet: no owner"; Contract to signature 12; Customer setup 6, its gates to confirm.]
 
 | # | Workflow | Starts with → ends with | Score | Why |
 | --- | --- | --- | --- | --- |
@@ -55,12 +57,15 @@ Six checks show where value leaks today, and whether someone can act on it.
 | 2 | Order entry | Order email → order confirmed in the ERP | 15/18 ▰▰▰▰▰▱ | Every order typed in by hand (Drive) |
 | 3 | Documentation packs | Order confirmed → pack sent | 14/18 ▰▰▰▰▰▱ not yet | Late packs, but nobody owns them (your note) |
 | 4 | Contract to signature | Sales contract → signed by the customer | 12/18 ▰▰▰▰▱▱ | Contracts wait on legal for days (Drive) |
-| 5 | Lead qualification | New lead → qualified opportunity | 9/18 ▰▰▰▱▱▱ not yet | From the standard map, no evidence yet |
+| 5 | Customer setup | Signed deal → customer set up in our systems | 6/18 ▰▰▱▱▱▱ | From the standard map, no evidence yet |
 
 Where I need your input:
 
 - Review the shortlist and share feedback.
 - Tell me who owns documentation packs, if anyone. That lifts it out of "not yet".
+- Tell me who owns customer setup and where customer data is kept. That settles its two gates.
+
+Sources: your note, Google Drive and Gmail.
 
 ---
 
@@ -71,14 +76,14 @@ For reference, no action needed. High 3, Medium 2, Low or unknown 1.
 | Check | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
 | Losing value | 3 | 2 | 3 | 2 | 1 ? |
-| Repetitive | 3 | 3 | 2 | 2 | 2 |
+| Repetitive | 3 | 3 | 2 | 2 | 1 ? |
 | Expensive | 3 | 3 | 2 | 1 | 1 ? |
 | Slow | 3 | 2 | 3 | 3 | 1 ? |
-| Data access (gate) | 2 | 3 | 3 | 2 | 3 |
-| Sponsor (gate) | 3 | 2 | 1 ✗ | 2 | 1 ? ✗ |
-| **Total /18** | **17** | **15** | **14** | **12** | **9** |
+| Data access (gate) | 2 | 3 | 3 | 2 | 1 ? to confirm |
+| Sponsor (gate) | 3 | 2 | 1 ✗ | 2 | 1 ? to confirm |
+| **Total /18** | **17** | **15** | **14** | **12** | **6** |
 
-A gate is a check that must pass, or the workflow waits as "not yet". The biggest unknown is how many small requests you win. Twenty recent ones would settle it.
+A gate is a check that must pass, or the workflow waits as "not yet". A gate marked "? to confirm" counts as 1 until you confirm it, and the workflow stays on the list. The biggest unknown is how many small requests you win. Twenty recent ones would settle it.
 
 **Pick card**
 
@@ -98,7 +103,7 @@ The scope card fixes where the workflow starts and ends, so the redesign cannot 
 
 [Visual: a swimlane flow titled "Every quote waits on an engineer and two manager decisions". Lanes: inside sales on top, sales manager, application engineer, pricing manager. Steps: read the request (start, inside sales), ◆ bid or no-bid (sales manager), deviation review (application engineer), build the price (pricing manager), ◆ approve discounts (sales manager, dashed, "above the limit only"), send and log (accent, inside sales).]
 
-Inside sales carries the quote from start to end. An engineer reviews every request, standard ones included, and the sales manager decides twice.
+An engineer reviews every request, standard ones included, and the sales manager decides twice.
 
 | Scope card | Inquiry to quote |
 | --- | --- |
@@ -112,9 +117,9 @@ Inside sales carries the quote from start to end. An engineer reviews every requ
 | Systems | Shared inbox, ERP, CRM, price lists, worksheets |
 | Must stay or needs approval | Bid or no-bid and discounts above the limit (sales manager); margin floor (pricing manager); ERP access (IT) |
 | Out of scope | Lead generation before the request; order entry after acceptance |
-| Where the value comes from | The team looks sold out, so freed hours are worth more quotes. A hypothesis, checked in step 4. |
+| Where the value comes from | Small requests are turned away today, so freed hours are worth more quotes. A hypothesis, checked in step 4. |
 
-**What the redesign must show**, fixed once you accept
+**What the redesign must show**, which step 2 turns into measures and red lines
 
 | | Hypothesis to confirm |
 | --- | --- |
@@ -123,7 +128,7 @@ Inside sales carries the quote from start to end. An engineer reviews every requ
 | Value | Small requests quoted instead of declined |
 | Human role | A person still signs every price and bid |
 
-How we use this: the scope card sets the boundary for every later step, and step 4 checks where the value comes from with you before putting numbers on it.
+How we use this: the scope card sets the boundary for every later step. Step 4 checks where the value comes from with you before putting numbers on it.
 
 Where I need your input:
 
@@ -131,8 +136,10 @@ Where I need your input:
 - Confirm the sales director as sponsor.
 - Check how many requests really need an engineer: if most do, the gain shrinks.
 
+Sources: your note, Google Drive and Gmail.
+
 **Next card**
 
 - Header: "Next step"
 - Question: "Is the scope card right?"
-- Options: "Yes, go to step 2: define success (Recommended)", "Adjust the scope card first".
+- Options: "Yes, go to step 2: define success (Recommended)" with "Confirms the scope card and the four lines on what the redesign must show.", "Adjust the scope card first".

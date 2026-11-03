@@ -1,13 +1,12 @@
-# Ruff settings for the repository's Python scripts (stdlib only, Python 3.10+).
+# Ruff settings for the repository's Python scripts (stdlib only, Python 3.10+, the sizer's script 3.9+).
 target-version = "py310"
 line-length = 100
 include = ["*.py"]
 force-exclude = true
-extend-exclude = [
-    # Skill content, left unchanged in this harness update. The content update
-    # formats and lints it, adds its SPDX header, then removes this line.
-    "skills/nova-forma-value-at-stake-sizer/scripts/value_case.py",
-]
+
+# The sizer's script runs in users' own Python, which on a Mac can be the system's 3.9.
+[per-file-target-version]
+"skills/*/scripts/*.py" = "py39"
 
 [lint]
 select = ["E", "W", "F", "I", "B", "UP", "SIM", "RUF"]

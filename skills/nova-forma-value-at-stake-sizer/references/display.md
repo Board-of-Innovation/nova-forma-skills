@@ -7,30 +7,31 @@ The four skills should feel like one tool the user fills in, step by step, insid
 A business owner or manager, usually new to AI. They know their work well and have little patience for method words. Every message must make sense to them without help:
 
 - Explain a term the first time it appears, in a few words. "A workflow is a chain of work from the moment something arrives to the moment someone gets a result."
-- Never mention models, prompts, MCP, tokens or context windows. Say "this assistant", "our earlier chats" and "your connected tools, such as Slack or Google Drive".
-- Never name the method, a framework or a source document. The recipe stays behind the scenes.
+- Use the words in Plain words below. Say "this assistant", "our earlier chats" and "your connected tools, such as Slack or Google Drive".
+- Never name the method or its frameworks: the method stays behind the scenes. Do name your sources, as `context.md` and the Research section below say.
 
 ## The rhythm of every step
 
 1. **Why this step**: when a step opens, one or two lines on why it matters. Each skill gives the text.
 2. **Your calls**: the questions, as question cards, each with a recommended answer and where it came from.
-3. **The result**, only once every call is made. Visual first, then the table.
+3. **The result**, only once every call is made. The headline first, then the visual, then the table.
 4. **How we use this**: one line on what the result does in a later step.
-5. **Where I need your input**: two to four short asks.
+5. **Where I need your input**: two to four short follow-ups.
 6. **Next**: the decision to move on, as a question card.
 
 Never show a draft result before the calls are in, and never make a call for the user without saying so.
 
 ## The tracker and the brief so far
 
-Every message opens with the tracker. Nothing goes above it.
+Every step message opens with the tracker. Nothing goes above it. A side answer of one or two lines, or a message that only opens a question card, needs no tracker and no visual.
 
 | 1 Pick the workflow | 2 Define success | 3 Map today's work | 4 Size the value |
 | :---: | :---: | :---: | :---: |
 | ✓ Done | ◉ **Now: your calls (1 of 2)** | Next | |
 
-- A finished step reads `✓ Done`, the next step `Next`, later steps stay empty.
+- A finished step reads `✓ Done`, the next step `Next`, later steps stay empty. An earlier step that never ran reads `Skipped`.
 - The current step reads `◉ **Now: <part> (<n> of <total>)**`.
+- Where tables do not show, write the tracker as one line: `Step 2 of 4, Define success: your calls (1 of 2)`.
 
 | Step | Parts |
 | --- | --- |
@@ -52,17 +53,17 @@ Every call the user makes goes in a question card, one decision per card. Use th
 | Environment | Form |
 | --- | --- |
 | A question card tool, such as AskUserQuestion | Pop-up cards the user answers one at a time. The default. |
-| An inline form widget, such as the Visualizer's elicitation module | One short form per round, options as cards or pills, numbers as sliders |
-| Neither | Numbered questions Q1 to Q3, each with the recommended answer, ending "Reply OK, or correct by number." |
+| An inline form the interface can render | One short form per round, options as cards or pills, numbers as sliders |
+| Neither | The text form under "Without cards" below |
 
 How to write a card:
 
 - **The question** is a full question in plain words that names the thing, such as "Which kind of work should I search for workflows to redesign?" Add why it matters in ten words or fewer, inside the question, because the card may show without the message above it.
-- **A short header** of 12 characters or fewer on every card, such as "Family", "Area", "Evidence", "Off limits" or "Workflow".
-- **Two to four options**, recommended first, with "(Recommended)" at the end of its label. The user can always type their own answer, so never add an "Other" option.
+- **A short header** of 12 characters or fewer, where the card has one, such as "Family", "Area", "Evidence", "Off limits" or "Workflow".
+- **Two to four options**, recommended first, with "(Recommended)" at the end of its label. When the card tool adds a free-text answer itself, never add an "Other" option. When it does not, add "Something else (type it)" as an extra last option, even after four, except on a sources card, as `context.md` says.
 - **Ranges keep their natural order**, low to high, with "(Recommended)" on the range the evidence points to. In a multi-select card, put every recommended option first and mark each one.
 - **Options do not overlap, and together they cover the ground.** Where the full set has more than four, group them, or ask the broad choice first and drill down in the next card.
-- **Each option gets a one-line description** that says what picking it means or leads to, with an example where the label is abstract.
+- **Each option gets a one-line description** that says what picking it means or leads to, with an example where the label is abstract. Where the card has no description field, put the descriptions in the message above it.
 - **Numbers become ranges** that do not overlap, such as "Under 50 a year", "50 to 100", "100 to 200", "More than 200". The user types an exact figure when they know it.
 - **Multi-select** where the user may want more than one, and say so in the question: "Pick one or more."
 - **Up to four cards in one round.** When a card depends on an earlier answer, ask the earlier one alone first.
@@ -70,15 +71,31 @@ How to write a card:
 
 Every message that comes before a card, results included, must be on screen before the card opens. If a send-message tool exists, such as SendUserMessage, send that message through it, then open the cards. Otherwise write it as normal reply text right before the cards.
 
-## Showing results: visual first, decision last
+### Without cards
+
+Write the round as numbered questions, Q1 to Q4, one for each card. Under each, list its options as a, b, c and d, with "(Recommended)" on each recommended one and a few words of description where the label needs it. The user can type their own answer, so add no "Something else". End with one line on how to reply:
+
+```
+Q1. Whose result should the new way of working improve?
+  a. The client's decision maker (Recommended, from the scope card)
+  b. Our own team
+  c. Both, with different needs
+Q2. What standard or deadline counts as a good result?
+  a. Within 5 working days, or by the deadline (Recommended)
+  b. Within 10 working days
+
+Reply OK to take every recommendation, or correct one, such as "2b".
+```
+
+## Showing results: headline first, decision last
 
 A result message runs in this order:
 
 1. Tracker and brief so far.
-2. The visual.
-3. The headline or suggestion, in one or two sentences.
+2. The headline or suggestion, in one or two sentences.
+3. The visual.
 4. The table.
-5. How we use this, and Where I need your input.
+5. How we use this, Where I need your input, and the sources line when `context.md` asks for one.
 6. The appendix, if there is one.
 
 Then the decision goes in a question card, so it stands on its own and never gets lost under the appendix. Without cards, put the decision in a quote block right under the table, before the appendix, and repeat it in one line at the very end.
@@ -87,7 +104,7 @@ Then the decision goes in a question card, so it stands on its own and never get
 
 ## Visuals: the bar is high
 
-Every message carries at least one visual, and every result shows its picture before its table. Draw it where the environment can: a chart or diagram widget, such as the Visualizer, or an artifact. Mermaid is fine for simple pictures, never for the swimlane flow. A picture that a demanding designer would not ship is worse than a clean table, so hold every visual to this bar:
+Every step message carries at least one visual, and every result shows its picture before its table. Draw it as "What the environment can show" below says. Mermaid is fine for simple pictures, never for the swimlane flow. A picture that a demanding designer would not ship is worse than a clean table, so hold every visual to this bar:
 
 - **One idea per picture**, and the title states the finding, such as "An MD signs off twice before a proposal leaves", never the topic.
 - **The user's words** on every label, at most four words a label, in sentence case.
@@ -99,10 +116,11 @@ Every message carries at least one visual, and every result shows its picture be
 
 | Step and part | Visual | Text version, when nothing can be drawn |
 | --- | --- | --- |
-| 1 Where to look | Source chips, on or off, and the four families of work as four columns | `✓ Meetings ✓ Docs ✓ Slack ✗ Email` |
+| 1 Where to look | Source chips, on only for what is already read or allowed, and the four families of work as four columns | `✓ Your note ○ Meetings ○ Docs ○ Slack ○ Email`, then one line per family, such as `Commercial: leads, quotes, orders, keeping customers` |
 | 1 Shortlist | Horizontal bars of each score out of 18, sorted, the suggestion in the accent, "not yet" greyed with its reason | `16/18 ▰▰▰▰▰▱` in the score column |
 | 1 Scope card | A swimlane flow, as described below | Numbered steps, as described below |
-| 2 Success definition | The statement as a highlighted card, the four tests as ticks, each measure as a today → target bar, the red lines as a fence | `Turnaround 5 days ▰▰▰▰▰ → 1 day ▰` and `⛔` before each red line |
+| 2 Success definition | The statement as a highlighted card, the four tests as ticks, each measure as a today → target bar | `Turnaround 5 days ▰▰▰▰▰ → 1 day ▰` and `⛔` before each red line |
+| 3 Opening | The workflow's steps as a strip, each marked by how much evidence there is | `1 Read the request ●● · 2 Check status ○` |
 | 3 Requirements | A heat map of the workflow's steps against the five buckets, cells shaded by count | A count bar per bucket: `Decide ▰▰▰ 3` |
 | 4 Where the value lands | The four sources of value as cards, marked likely, possible or unlikely | `● likely ◐ possible ○ unlikely` |
 | 4 Numbers | The inputs, each tagged by where it came from | `✓ from you ≈ hypothesis ? needed` |
@@ -110,7 +128,7 @@ Every message carries at least one visual, and every result shows its picture be
 
 ### The swimlane flow, in detail
 
-This picture shows the workflow the whole redesign is about, so it gets the most care. Draw it as SVG, in a diagram widget such as the Visualizer or in an artifact, so approvals can sit on their lane and arrows can bend around boxes.
+This picture shows the workflow the whole redesign is about, so it gets the most care. Draw it as SVG, inside the reply or in a separate document, so approvals can sit on their lane and arrows can bend around boxes.
 
 - One lane per role, three to five lanes, the lane name on the left. The role that carries most of the work sits on top.
 - Three to seven steps, left to right, each a box with a verb and a noun: "Draft the proposal".
@@ -120,7 +138,7 @@ This picture shows the workflow the whole redesign is about, so it gets the most
 - Arrows run between boxes, never through a box or a label. Elbows, not diagonals.
 - A one-sentence reading under the picture.
 
-Without a drawing tool, never draw lanes in characters: they break on a phone. Write numbered steps instead, with the role in brackets and ◆ before an approval:
+Without a drawing tool, never draw lanes in characters: they break on a phone. Write numbered steps instead, with the role in brackets, ◆ before an approval, and the condition after a step only some cases take, such as "(formal RFPs only)":
 
 ```
 ▶ 1. Brief arrives (proposal lead)
@@ -131,21 +149,22 @@ Without a drawing tool, never draw lanes in characters: they break on a phone. W
 ■ 6. Proposal reaches the client (proposal lead)
 ```
 
-## Other environments
+## What the environment can show
 
-| Environment | Form |
+Check what this environment can show, and use the first row that fits. Where it cannot do something, the text version replaces it.
+
+| The environment can | Do this |
 | --- | --- |
-| ChatGPT | Tables in the reply, a canvas for long results |
-| Microsoft Copilot | Narrow tables that paste cleanly into Word or PowerPoint |
-| Claude Code and terminals | Plain markdown |
-| Slack or Teams | A short message with the result, the detail in a thread |
-| Voice | The result in two sentences, then an offer to send the detail |
+| Draw charts or diagrams inside the reply, such as with the Visualizer | Draw each visual in the message. |
+| Only make separate documents, such as an artifact or a canvas | Make one for the swimlane flow, one for each step's result and one for the one-pager. Use the text versions everywhere else. |
+| Show markdown tables, but not draw | Use the tracker table and the text version of each visual. |
+| Show plain text only, such as a chat app without tables, or voice | Use the one-line tracker and the text versions, with no tables. In a chat app, put the result in a short message and the detail in a thread. In voice, say the result in two sentences, then offer to send the detail. |
 
-Use what you can actually see, and never claim a feature you cannot see.
+Keep tables narrow, so they paste cleanly into a document or a slide. Use what you can actually see, and never claim a feature you cannot see. A file you write to the user's disk is not a document here unless the user asks for one.
 
 ## Where I need your input
 
-End every result with "Where I need your input:" and two to four bullets, each one thing the user can do in a few words. The first is always to review the result and share feedback. The others are the open points that would change the result: an owner to name, an assumption to check, a number to find, a question to forward.
+Close every result, before any appendix, with "Where I need your input:" and two to four bullets, each one thing the user can do in a few words. The first is always to review the result and share feedback. The others are the open points that would change the result: an owner to name, an assumption to check, a number to find, a question to forward. These are follow-ups: the decision to move on stays in its own card.
 
 When something in the result is weak, turn it into an ask here, never into a debate. Never agree just to move on: an unconfirmed guess always becomes a bullet.
 
@@ -159,7 +178,7 @@ Aim for 250 words a message, tables included, and never pass 350, the appendix n
 
 ## Plain words
 
-Replace these words in everything the user sees:
+This is the one list of plain words for every message. Replace the words on the left in everything the user sees, unless the user uses the word first. A term from the user's own business is fine.
 
 | Avoid | Say |
 | --- | --- |
@@ -176,6 +195,10 @@ Replace these words in everything the user sees:
 | Addressable share | The share of hours AI could take over |
 | Sold out | Turning work away, or answering it rushed |
 | Context, memory, MCP | What I know from our earlier chats and your connected tools |
+| Model, LLM, prompt, tokens, context window, RAG | This assistant, or what it does |
+| AI agent, agentic | AI that does a step on its own |
+
+Leave out business jargon by the same rule: synergies, verticals, bandwidth, low-hanging fruit, move the needle, ecosystem, holistic, scalable, operationalize, value-add.
 
 These words are useful, so keep them, but explain each one in a few words the first time the user sees it:
 
@@ -188,7 +211,8 @@ These words are useful, so keep them, but explain each one in a few words the fi
 | Red line | A rule the new way of working may never break |
 | Requirement | Something the work must know, decide, produce, do or check |
 | Exception | A case that leaves the normal path |
+| The redesign week | The one-week redesign of this workflow, done together with your team |
 
 ## Research
 
-Cite a finding only when it fits the user's case. Leave out findings that are old, vendor-sponsored, from a very different business, or not about AI, unless you say so plainly. One fitting finding beats two weak ones. When nothing fits, say so and point to the user's own data.
+Cite a research finding only from `references/evidence.md`, by the rules at its top.

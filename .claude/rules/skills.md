@@ -15,6 +15,6 @@ These rules apply whenever you change a file under `skills/` or `shared/`. AGENT
 - **Size.** Keep `SKILL.md` under 500 lines and the `description` under 1,024 characters. Put detail in `references/`.
 - **Plain-text fallback.** Every question card, inline form, visual or attachment needs a stated fallback for apps that cannot show it.
 - **Evidence and examples.** Figures come from public sources with a working link, quoted as the source states them. Examples are invented and obviously illustrative: round numbers, roles instead of names, no real company or client.
-- **Scripts.** Standard library only, no network calls, called by a path relative to `SKILL.md`. Python files carry `# SPDX-License-Identifier: Apache-2.0`.
+- **Scripts.** Standard library only, Python 3.9 or later, no network calls, called by a path relative to `SKILL.md`. Python files carry `# SPDX-License-Identifier: Apache-2.0`.
 - **Writing.** Plain English for business readers who are new to AI, following `references/writing.md`. No em or en dashes.
 - **Afterwards.** Run `python3 scripts/check.py`, and add a line under `## [Unreleased]` in `CHANGELOG.md` when the change alters what a skill does.
