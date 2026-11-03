@@ -51,6 +51,13 @@ jobs:
         if: ${{ !cancelled() }}
         run: python3 scripts/build_zips.py --out "$RUNNER_TEMP/dist"
 
+      - name: Sizer script on Python 3.9, the oldest Python 3 a Mac ships
+        if: ${{ !cancelled() }}
+        run: >-
+          uv run --no-project --python 3.9 -- python -I
+          skills/nova-forma-value-at-stake-sizer/scripts/value_case.py
+          skills/nova-forma-value-at-stake-sizer/references/example-inputs.json
+
       - name: Agent Skills spec (skills-ref)
         if: ${{ !cancelled() }}
         run: |

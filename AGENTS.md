@@ -73,7 +73,7 @@ Each skill reads what the earlier steps produced in the conversation and ends by
 
 - **Keep each skill self-contained.** Every file a skill mentions lives in its own folder, because a zip upload holds one skill folder and nothing else. No `../` paths and no links into another skill. Keep `SKILL.md` under 500 lines and move detail into `references/`.
 - **Give every host-specific feature a plain-text fallback.** Question cards, inline forms, drawn visuals and file attachments exist only in some apps. Wherever a skill uses one, it also says what to do without it, such as "Without cards, end with: Reply Accept to go to step 2."
-- **Scripts in skills** use only the Python standard library, make no network calls, and are called by a path relative to `SKILL.md`, such as `scripts/value_case.py`.
+- **Scripts in skills** use only the Python standard library, run on Python 3.9 or later (a Mac's system Python), make no network calls, and are called by a path relative to `SKILL.md`, such as `scripts/value_case.py`.
 - **Python files** start with `# SPDX-License-Identifier: Apache-2.0`, on the second line when the first is a `#!` line.
 - **Write plain English** for business owners and managers who are new to AI, following `shared/references/writing.md`. Use no em or en dashes: use a comma, a colon or a full stop.
 - **Maintainer helpers for Claude Code** go in `.claude/commands/`, never in `.claude/skills/`, because `npx skills` would offer those to end users.
@@ -96,6 +96,7 @@ uvx ruff@0.17.1 check . && uvx ruff@0.17.1 format --check .
 npx --yes markdownlint-cli2@0.24.0
 npx --yes @anthropic-ai/claude-code@2.1.311 plugin validate . --strict
 python3 scripts/build_zips.py
+uv run --no-project --python 3.9 -- python -I skills/nova-forma-value-at-stake-sizer/scripts/value_case.py skills/nova-forma-value-at-stake-sizer/references/example-inputs.json
 ```
 
 Never weaken a check or a lint rule to make a failure go away. In Claude Code, `/check` runs everything and explains each failure, and `/public-review` reviews a change against the rules above.

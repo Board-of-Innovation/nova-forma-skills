@@ -4,6 +4,8 @@
 
 Usage: python3 value_case.py inputs.json
 
+Runs on Python 3.9 or later, the oldest Python 3 a Mac still ships.
+
 Any number in the input may be a single value or a pair such as
 {"low": 0.3, "high": 0.6}. Values are per year and before build and
 running costs, unless costs are given. references/levers.md lists every
@@ -413,9 +415,9 @@ def report(p):
         )
     if lo["lever_fte"] or hi["lever_fte"]:
         print(f"| FTE savings | {m(lo['lever_fte'])} | {m(hi['lever_fte'])} |")
-    for (name, a), (_, b2) in zip(lo["impact"], hi["impact"], strict=True):
+    for (name, a), (_, b2) in zip(lo["impact"], hi["impact"]):
         print(f"| Business impact: {name} | {m(a)} | {m(b2)} |")
-    for (name, a, be), (_, b2, _) in zip(lo["creation"], hi["creation"], strict=True):
+    for (name, a, be), (_, b2, _) in zip(lo["creation"], hi["creation"]):
         if a == 0 and b2 == 0 and be:
             print(f"| Value creation: {name} | not sized, {be} | not sized, {be} |")
         else:
@@ -484,6 +486,40 @@ def report(p):
         cases = [c for c, r in (("low", lo), ("high", hi)) if f in r["flags"]]
         tag = "both cases" if len(cases) == 2 else f"{cases[0]} case"
         print(f"Check, {tag}: {f}")
+    for item in not_checked(p):
+        print(f"Not checked: {item}.")
+
+
+def not_checked(p):
+    """Name each size check the input leaves out, so a missing field never passes silently."""
+
+    def given(pair):
+        return pair is not None and max(pair) > 0
+
+    missing = []
+    use = p["use"]
+    if use and max(p["s_put_to_use"]) > 0:
+        if use["cap"] is None:
+            missing.append(
+                "extra units against real demand, such as requests declined today "
+                "(needs put_to_use.demand_cap_units)"
+            )
+        if use["volume"] is None:
+            missing.append(
+                "extra units against 25% of today's volume (needs put_to_use.volume_today)"
+            )
+    if p["team"] is None:
+        missing.append("freed hours against what the team works a year (needs baseline.team_fte)")
+    if not given(p["revenue"]) and not given(p["ebit"]):
+        missing.append(
+            "the case against the company's size (needs company.revenue, or company.ebit above 0)"
+        )
+    if p["one_off"] is None and p["spend"] is None:
+        missing.append(
+            "payback under six months (needs costs.one_off or reference_spend; without a cost, "
+            "report the year-one spending ceiling instead)"
+        )
+    return missing
 
 
 def main(path):
