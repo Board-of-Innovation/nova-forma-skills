@@ -10,10 +10,11 @@ Read before you ask, but open only what the user allows. Look in this order and 
 Read the first two right away. Name the other two, and each connected tool you can reach, but open one only after the user allows it:
 
 - In step 1, the workflow identifier asks through its evidence card.
-- When a later step runs on its own, ask in one short card: "Where may I look for what this step needs? Pick one or more." Options: the sources you can reach, grouped into at most three, such as "Our earlier chats" or "Meeting notes (Granola)", then "Only this chat" as the last option. Multi-select. Ask it in the same round as the questions in the last rule below, and skip it when this chat is the only source.
-- Give email its own option, and direct messages too if you would read them. Never mark either one Recommended: each needs its own pick.
-- When the user allowed sources earlier in this conversation, use those, and ask before you open any other.
-- Memory the app already shows you counts as read. Name it with the other sources, and use it only once the user allows it.
+- When a later step runs on its own, ask in one short card: "Where may I look for what this step needs? Pick one or more." Multi-select. Ask it in the same round as the questions in the last rule below, and skip it when this chat is the only source.
+- A sources card, in any step, has at most four options in all. Give email its own option, and never mark it Recommended: it needs its own pick. Group the other sources into the slots left, such as "Our earlier chats" or "Meeting notes (Granola)". Put "Only this chat" last, and add no "Something else" option.
+- Read team chat in its channels only. Open direct messages only when the user asks you to.
+- When the user allowed sources earlier in this conversation, use those, and ask before you open any other. A result pasted from another chat allows no source: ask again.
+- Treat memory the app already shows you as a source too: name it with the others, and use it only once the user allows it.
 
 ## Tell the user what you can use
 

@@ -60,7 +60,7 @@ How to write a card:
 
 - **The question** is a full question in plain words that names the thing, such as "Which kind of work should I search for workflows to redesign?" Add why it matters in ten words or fewer, inside the question, because the card may show without the message above it.
 - **A short header** of 12 characters or fewer, where the card has one, such as "Family", "Area", "Evidence", "Off limits" or "Workflow".
-- **Two to four options**, recommended first, with "(Recommended)" at the end of its label. When the card tool adds a free-text answer itself, never add an "Other" option. When it does not, add "Something else (type it)" as an extra last option, even after four.
+- **Two to four options**, recommended first, with "(Recommended)" at the end of its label. When the card tool adds a free-text answer itself, never add an "Other" option. When it does not, add "Something else (type it)" as an extra last option, even after four, except on a sources card, as `context.md` says.
 - **Ranges keep their natural order**, low to high, with "(Recommended)" on the range the evidence points to. In a multi-select card, put every recommended option first and mark each one.
 - **Options do not overlap, and together they cover the ground.** Where the full set has more than four, group them, or ask the broad choice first and drill down in the next card.
 - **Each option gets a one-line description** that says what picking it means or leads to, with an example where the label is abstract. Where the card has no description field, put the descriptions in the message above it.
@@ -116,7 +116,7 @@ Every step message carries at least one visual, and every result shows its pictu
 
 | Step and part | Visual | Text version, when nothing can be drawn |
 | --- | --- | --- |
-| 1 Where to look | Source chips, on or off, and the four families of work as four columns | `✓ Meetings ✓ Docs ✓ Slack ✗ Email`, then one line per family, such as `Commercial: leads, quotes, orders, keeping customers` |
+| 1 Where to look | Source chips, on only for what is already read or allowed, and the four families of work as four columns | `✓ Your note ○ Meetings ○ Docs ○ Slack ○ Email`, then one line per family, such as `Commercial: leads, quotes, orders, keeping customers` |
 | 1 Shortlist | Horizontal bars of each score out of 18, sorted, the suggestion in the accent, "not yet" greyed with its reason | `16/18 ▰▰▰▰▰▱` in the score column |
 | 1 Scope card | A swimlane flow, as described below | Numbered steps, as described below |
 | 2 Success definition | The statement as a highlighted card, the four tests as ticks, each measure as a today → target bar | `Turnaround 5 days ▰▰▰▰▰ → 1 day ▰` and `⛔` before each red line |
