@@ -10,7 +10,7 @@ Read the message as the user will, on a phone, then answer six questions:
 2. Would a manager new to AI understand every word on first read?
 3. Does every number say what it means for them, and where it came from?
 4. Does any sentence stage a point instead of making it?
-5. Is there a dash used as punctuation, a word from the list below or from the plain words in `display.md`, or a bold word that carries nothing?
+5. Is there a dash used as punctuation, a word from the list below or from the Avoid column of Plain words in `display.md`, or a bold word that carries nothing?
 6. Can I cut a sentence without losing a fact? Then cut it.
 
 ## A. Remove the AI tells

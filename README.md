@@ -117,7 +117,7 @@ To choose a skill yourself, type `/` in the message box and pick it. Each step a
 ## Your data
 
 - The skills run inside your assistant. Nothing is sent to Board of Innovation, and the skills contain no tracking.
-- They read what you write and the files you attach. They ask before they open your earlier chats or any connected tool, and they only use what you allow. A result that used more than the conversation ends with a line naming its sources.
+- They read what you write and the files you attach. They are written to ask before they open your earlier chats or any connected tool, and to use only what you allow. Your assistant's own memory settings still apply. A result that used more than the conversation carries a line naming its sources.
 - The value sizer's script only does arithmetic. It runs in your assistant's own code environment, reads only the numbers it is given and makes no network calls.
 - Your assistant's provider handles your conversation under your plan's terms, as with any other chat.
 - Every estimate is marked as a hypothesis. Check names and numbers before you share a result.
