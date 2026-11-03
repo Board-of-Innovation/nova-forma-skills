@@ -15,7 +15,8 @@ Score every criterion against these anchors. A total runs from 6 to 18, with Low
 
 - Convert hours to FTE with about 1,700 working hours a year, unless the user gives a figure.
 - For a small team, judge "expensive" against the team's size: two FTE in a team of five is High.
-- Sponsor and data access are gates. A Low on either moves the candidate to "not yet", with what would lift it, such as "name an owner" or "get read access to the ERP".
+- Sponsor and data access are gates. A Low on either, scored on evidence, moves the candidate to "not yet", with what would lift it, such as "name an owner" or "get read access to the ERP".
+- An unknown gate is not a Low. Show it as "? to confirm" and count it as 1. Keep the candidate eligible, and ask the user to confirm the gate under Where I need your input. A candidate from the standard map starts with both gates unknown.
 - Score the workflow as it runs today. A planned system or reorganization does not count until it exists.
 
 ## Evidence that settles a score

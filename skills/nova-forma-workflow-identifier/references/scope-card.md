@@ -45,7 +45,7 @@ The user picks Commercial and Operational.
 
 Six checks show where value leaks today, and whether someone can act on it.
 
-[Visual: horizontal bars out of 18, sorted. Inquiry to quote 17 in the accent; Order entry 15; Documentation packs 14, greyed, "not yet: no owner"; Contract to signature 12; Lead qualification 9, greyed, "not yet: no evidence".]
+[Visual: horizontal bars out of 18, sorted. Inquiry to quote 17 in the accent; Order entry 15; Documentation packs 14, greyed, "not yet: no owner"; Contract to signature 12; Lead qualification 7, its gates to confirm.]
 
 **My suggestion:** start with inquiry to quote. Small requests are declined today, so it loses money every month. It beats order entry, which is slow to type but rarely loses an order.
 
@@ -55,12 +55,13 @@ Six checks show where value leaks today, and whether someone can act on it.
 | 2 | Order entry | Order email → order confirmed in the ERP | 15/18 ▰▰▰▰▰▱ | Every order typed in by hand (Drive) |
 | 3 | Documentation packs | Order confirmed → pack sent | 14/18 ▰▰▰▰▰▱ not yet | Late packs, but nobody owns them (your note) |
 | 4 | Contract to signature | Sales contract → signed by the customer | 12/18 ▰▰▰▰▱▱ | Contracts wait on legal for days (Drive) |
-| 5 | Lead qualification | New lead → qualified opportunity | 9/18 ▰▰▰▱▱▱ not yet | From the standard map, no evidence yet |
+| 5 | Lead qualification | New lead → qualified opportunity | 7/18 ▰▰▱▱▱▱ | From the standard map, no evidence yet |
 
 Where I need your input:
 
 - Review the shortlist and share feedback.
 - Tell me who owns documentation packs, if anyone. That lifts it out of "not yet".
+- Tell me who owns lead qualification and where leads are kept. That settles its two gates.
 
 ---
 
@@ -74,11 +75,11 @@ For reference, no action needed. High 3, Medium 2, Low or unknown 1.
 | Repetitive | 3 | 3 | 2 | 2 | 2 |
 | Expensive | 3 | 3 | 2 | 1 | 1 ? |
 | Slow | 3 | 2 | 3 | 3 | 1 ? |
-| Data access (gate) | 2 | 3 | 3 | 2 | 3 |
-| Sponsor (gate) | 3 | 2 | 1 ✗ | 2 | 1 ? ✗ |
-| **Total /18** | **17** | **15** | **14** | **12** | **9** |
+| Data access (gate) | 2 | 3 | 3 | 2 | 1 ? to confirm |
+| Sponsor (gate) | 3 | 2 | 1 ✗ | 2 | 1 ? to confirm |
+| **Total /18** | **17** | **15** | **14** | **12** | **7** |
 
-A gate is a check that must pass, or the workflow waits as "not yet". The biggest unknown is how many small requests you win. Twenty recent ones would settle it.
+A gate is a check that must pass, or the workflow waits as "not yet". A gate marked "? to confirm" counts as 1 until you confirm it, and the workflow stays on the list. The biggest unknown is how many small requests you win. Twenty recent ones would settle it.
 
 **Pick card**
 
@@ -112,9 +113,9 @@ Inside sales carries the quote from start to end. An engineer reviews every requ
 | Systems | Shared inbox, ERP, CRM, price lists, worksheets |
 | Must stay or needs approval | Bid or no-bid and discounts above the limit (sales manager); margin floor (pricing manager); ERP access (IT) |
 | Out of scope | Lead generation before the request; order entry after acceptance |
-| Where the value comes from | The team looks sold out, so freed hours are worth more quotes. A hypothesis, checked in step 4. |
+| Where the value comes from | Small requests are turned away today, so freed hours are worth more quotes. A hypothesis, checked in step 4. |
 
-**What the redesign must show**, fixed once you accept
+**What the redesign must show**, which step 2 turns into measures and red lines
 
 | | Hypothesis to confirm |
 | --- | --- |
@@ -123,7 +124,7 @@ Inside sales carries the quote from start to end. An engineer reviews every requ
 | Value | Small requests quoted instead of declined |
 | Human role | A person still signs every price and bid |
 
-How we use this: the scope card sets the boundary for every later step, and step 4 checks where the value comes from with you before putting numbers on it.
+How we use this: the scope card sets the boundary for every later step. Step 4 checks where the value comes from with you before putting numbers on it.
 
 Where I need your input:
 
