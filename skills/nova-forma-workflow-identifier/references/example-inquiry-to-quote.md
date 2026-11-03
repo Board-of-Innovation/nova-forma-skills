@@ -35,6 +35,8 @@ The user picks Commercial and Operational.
 - "Where may I look for signs of slow or painful work? Pick one or more." Options: "Google Drive (Recommended)" with "Process files and quote templates.", "Gmail" with "Quote requests and chasers. The most personal source.", "Only this chat" with "I use your note and your answers only."
 - "Is any work off limits, or already decided?" Options: "Nothing, search freely (Recommended)", "Leave out work already being changed".
 
+The user picks Quote and propose, Close and onboard, Make or deliver, Google Drive and Gmail, and nothing off limits.
+
 ## Moment 2: the shortlist
 
 | 1 Pick the workflow | 2 Define success | 3 Map today's work | 4 Size the value |
