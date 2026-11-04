@@ -162,7 +162,7 @@ Feedback and fixes are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first: t
 
 The skills are licensed under the [Apache License 2.0](LICENSE): you may use, change and share them, also for commercial work. Keep the license and the [NOTICE](NOTICE) file with any copy, and mark the files you change. Copyright 2026 Board of Innovation BV.
 
-**Names and logos.** The license grants no rights to the Nova Forma or Board of Innovation names or logos (section 6 of the license). The files that show the Nova Forma logo, the banners in [.github/assets](.github/assets) and the plugin icon in [.claude-plugin](.claude-plugin), are not covered by the Apache License 2.0: all rights in them are reserved. You may say that your work is based on the Nova Forma skills. A changed version should carry its own name and should not present itself as the official Nova Forma skills.
+**Names and logos.** The license grants no rights to the Nova Forma or Board of Innovation names or logos (section 6 of the license). The files that show the Nova Forma logo, the banners and the logo file in [.github/assets](.github/assets) and the plugin icon in [.claude-plugin](.claude-plugin), are not covered by the Apache License 2.0: all rights in them are reserved. You may say that your work is based on the Nova Forma skills. A changed version should carry its own name and should not present itself as the official Nova Forma skills.
 
 **Sources.** The skills cite published research. Those sources belong to their publishers. The license covers this repository's own text and code.
 

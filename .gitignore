@@ -7,7 +7,7 @@ __pycache__/
 .venv/
 .ruff_cache/
 
-# Node (npx tools)
+# Node (npx tools, and the README image generator in .github/assets/src/)
 node_modules/
 
 # Operating system files

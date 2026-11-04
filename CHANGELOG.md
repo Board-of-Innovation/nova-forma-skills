@@ -6,6 +6,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Changed
+
+- NOTICE also lists the Nova Forma logo file in `.github/assets/src/`, which the README images are drawn from, among the files the Apache License 2.0 does not cover.
+
 ## [1.0.0] - 2026-11-04
 
 The first public release.

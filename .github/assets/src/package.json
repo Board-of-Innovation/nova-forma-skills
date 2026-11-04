@@ -1,0 +1,18 @@
+{
+  "name": "nova-forma-readme-images",
+  "private": true,
+  "description": "Draws the README banner and four-steps images in .github/assets/.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@expo-google-fonts/funnel-display": "0.4.1",
+    "@expo-google-fonts/geist": "0.4.2",
+    "@expo-google-fonts/geist-mono": "0.4.3",
+    "opentype.js": "1.3.4"
+  }
+}

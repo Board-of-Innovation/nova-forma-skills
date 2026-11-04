@@ -5,9 +5,9 @@ This product was developed by Board of Innovation (https://www.boardofinnovation
 
 The Nova Forma and Board of Innovation names and logos belong to Board of
 Innovation BV. The Apache License 2.0 grants no rights to them (section 6).
-The files that show the Nova Forma logo, the banners in .github/assets/ and
-the plugin icon in .claude-plugin/, are not covered by the license: all rights
-in them are reserved.
+The files that show the Nova Forma logo, the banners and the logo file in
+.github/assets/ and the plugin icon in .claude-plugin/, are not covered by the
+license: all rights in them are reserved.
 
 The list of AI writing tells in shared/references/writing.md, copied into
 every skill as references/writing.md, adapts material from the humanizer
