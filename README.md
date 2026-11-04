@@ -43,27 +43,6 @@ This is the recommended way. It adds all four skills at once and keeps them up t
 The four skills now appear under **Customize > Skills**. They also work in Cowork, and in Claude Code when you sign in with the same account. To get a newer version, select **Check for updates**, or turn on **Sync automatically**.
 
 <details>
-<summary><b>Upload the skills one by one</b></summary>
-
-<br>
-
-Use this when your organization doesn't let you add a marketplace, or when you want only some of the skills.
-
-1. Download each skill you want from the [latest release](https://github.com/Board-of-Innovation/nova-forma-skills/releases/latest):
-   - [nova-forma-workflow-identifier.zip](https://github.com/Board-of-Innovation/nova-forma-skills/releases/latest/download/nova-forma-workflow-identifier.zip)
-   - [nova-forma-outcome-statement-writer.zip](https://github.com/Board-of-Innovation/nova-forma-skills/releases/latest/download/nova-forma-outcome-statement-writer.zip)
-   - [nova-forma-requirements-lister.zip](https://github.com/Board-of-Innovation/nova-forma-skills/releases/latest/download/nova-forma-requirements-lister.zip)
-   - [nova-forma-value-at-stake-sizer.zip](https://github.com/Board-of-Innovation/nova-forma-skills/releases/latest/download/nova-forma-value-at-stake-sizer.zip)
-2. Open [Customize > Skills](https://claude.ai/customize/skills) in Claude, select **+**, then **Create skill**, then **Upload a skill**.
-3. Choose the zip file. Repeat for each skill, then turn each one on.
-
-Upload the zip file as it is. If your browser unzipped it, compress the folder again before you upload it.
-
-Uploaded skills don't update themselves. For a new version, download and upload them again.
-
-</details>
-
-<details>
 <summary><b>Claude Code</b></summary>
 
 <br>
@@ -99,9 +78,24 @@ It asks which skills to install and for which assistants. The value sizer runs a
 
 <br>
 
-An Owner can give the skills to the whole organization. Go to **Organization settings > Plugins & skills**, select **Add**, then **Upload a skill**, and upload each of the four zip files from the [latest release](https://github.com/Board-of-Innovation/nova-forma-skills/releases/latest). Then choose who gets them. [Manage plugins for your organization](https://claude.com/docs/plugins/admin) has the details.
+An Owner can make the plugin available to the whole organization from **Organization settings > Plugins & skills**, and choose whether members install it themselves, get it installed by default, or must keep it on. **Sync from GitHub** there accepts only private or internal repositories, and this one is public. So create a small private repository that holds one file, `.claude-plugin/marketplace.json`, which lists this repository as a `github` source, and sync that one:
 
-Members also need **Code execution and file creation** turned on under **Organization settings > Capabilities**. To add the marketplace themselves, they need **User-created skills** turned on under **Organization settings > Plugins & skills > Policy**.
+```json
+{
+  "name": "our-plugins",
+  "owner": { "name": "Your organization" },
+  "plugins": [
+    {
+      "name": "nova-forma",
+      "source": { "source": "github", "repo": "Board-of-Innovation/nova-forma-skills" }
+    }
+  ]
+}
+```
+
+Members don't need access to that repository. It syncs only when someone pushes to it or an Owner selects **Re-sync** on the **Marketplaces** tab, so select **Re-sync** after each new release of the skills. [Sync your organization's plugins from a repository](https://claude.com/docs/plugins/org-sync) and [Manage plugins for your organization](https://claude.com/docs/plugins/admin) have the details.
+
+Members can also add the marketplace themselves, with the steps above, when **User-created skills** is on under **Organization settings > Plugins & skills > Policy**. Either way, they need **Code execution and file creation** turned on under **Organization settings > Capabilities**.
 
 </details>
 

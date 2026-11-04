@@ -1,6 +1,3 @@
-# Build output: zips are built by scripts/build_zips.py and attached to releases
-dist/
-
 # Private terms for the public-repo check (client names and the like). Never commit it.
 .denylist.local
 

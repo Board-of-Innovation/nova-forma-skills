@@ -76,7 +76,6 @@ body:
       label: How did you install the skills?
       options:
         - Added the marketplace in Claude
-        - Uploaded the zip files
         - Claude Code plugin
         - npx skills
         - Provided by my organization

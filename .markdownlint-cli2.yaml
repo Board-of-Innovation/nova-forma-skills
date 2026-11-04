@@ -4,6 +4,5 @@ globs:
   - "**/*.md"
 ignores:
   - "node_modules/**"
-  - "dist/**"
   - ".venv/**"
 gitignore: true

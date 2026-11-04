@@ -47,10 +47,6 @@ jobs:
         if: ${{ !cancelled() }}
         run: python3 scripts/check.py
 
-      - name: Skill zips build and verify
-        if: ${{ !cancelled() }}
-        run: python3 scripts/build_zips.py --out "$RUNNER_TEMP/dist"
-
       - name: Sizer script on Python 3.9, the oldest Python 3 a Mac ships
         if: ${{ !cancelled() }}
         run: >-

@@ -15,7 +15,7 @@ body:
       label: What went wrong?
       options:
         - Adding the marketplace or the plugin in Claude
-        - Uploading a skill zip
+        - Making the plugin available to an organization
         - Installing in Claude Code
         - Installing with npx skills
         - The value sizer's script

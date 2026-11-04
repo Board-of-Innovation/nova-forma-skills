@@ -6,6 +6,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-11-04
+
+The first public release.
+
 ### Added
 
 - The four Nova Forma skills, run in order:
@@ -14,9 +18,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
   3. `nova-forma-requirements-lister`: Map today's work.
   4. `nova-forma-value-at-stake-sizer`: Size the value, ending with a one-page brief for the redesign week.
 - Plugin and marketplace manifests in `.claude-plugin/`, so the repository installs as the `nova-forma` plugin from the `nova-forma-skills` marketplace.
-- A zip file per skill on every GitHub release, for uploading the skills to Claude one by one.
 - Shared references kept in `shared/references/` and copied into every skill by `scripts/sync_shared.py`.
-- The Apache 2.0 license, a NOTICE file, and a copy of both in every skill folder, so each zip carries them.
+- The Apache 2.0 license, a NOTICE file, and a copy of both in every skill folder, so a skill installed on its own carries them.
 - A contributing guide, a security policy, a code of conduct, and issue and pull request templates.
 - `references/one-pager.md` in the value-at-stake sizer: what the brief for the redesign week holds, with an example.
 
@@ -42,4 +45,5 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - The examples follow their own rules: real today and target values, owners marked "Unknown, to confirm", no rows after the workflow's end point, and red lines that match the scope card.
 - The writing rules credit the MIT-licensed humanizer skill they adapt, with its notice in NOTICE.
 
-[Unreleased]: https://github.com/Board-of-Innovation/nova-forma-skills/commits/main
+[Unreleased]: https://github.com/Board-of-Innovation/nova-forma-skills/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/Board-of-Innovation/nova-forma-skills/releases/tag/v1.0.0

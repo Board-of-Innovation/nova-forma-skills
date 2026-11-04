@@ -228,11 +228,7 @@ def repo_files() -> tuple[list[Path], set[Path], bool]:
     out = run_git("ls-files", "-z", "--cached", "--others", "--exclude-standard")
     tracked_out = run_git("ls-files", "-z", "--cached")
     if out is None or tracked_out is None:
-        files = [
-            p.relative_to(ROOT)
-            for p in walk(ROOT)
-            if p.is_file() and not p.is_symlink() and "dist" not in p.relative_to(ROOT).parts[:1]
-        ]
+        files = [p.relative_to(ROOT) for p in walk(ROOT) if p.is_file() and not p.is_symlink()]
         files = [p for p in files if p != LOCAL_DENYLIST]
         return sorted(files), set(), False
     paths = {Path(p) for p in out.split("\0") if p}
@@ -732,7 +728,7 @@ def check_hygiene(files: list[Path], tracked: set[Path], used_git: bool) -> Sect
         if path.is_symlink():
             section.error(
                 f"{path.relative_to(ROOT)} is a symlink",
-                "replace symlinks with real copies; they break zips, Windows and installers",
+                "replace symlinks with real copies; they break Windows checkouts and installers",
             )
     if used_git:
         staged = run_git("ls-files", "-s") or ""
@@ -756,15 +752,15 @@ def check_hygiene(files: list[Path], tracked: set[Path], used_git: bool) -> Sect
     reported: set[Path] = set()
     for path in sorted(on_disk):
         rel = path.relative_to(ROOT)
-        if rel.parts[0] == "dist" or rel in tracked:
+        if rel in tracked:
             continue
         kind = junk_reason(rel)
         if kind and not any(parent in reported for parent in rel.parents):
             reported.add(rel)
             section.error(
-                f"{rel} is present outside dist/",
+                f"{rel} should not be in the working tree",
                 "delete junk files: find . -name .DS_Store -delete; "
-                "find . -name __pycache__ -prune -exec rm -rf {} +; zips belong in dist/ only",
+                "find . -name __pycache__ -prune -exec rm -rf {} +; delete zip files, the repo holds none",
             )
 
     if (ROOT / "bin").exists():

@@ -15,7 +15,7 @@ Only the maintainers see your report. We confirm that we received it, keep you u
 - A skill instruction that could make the assistant read, reveal or send data from connected tools, such as email, team chat, documents or meeting notes, beyond what the user allowed.
 - Prompt injection: text in a file, email or web page that a skill reads, and that can steer the assistant to act against the user.
 - The value sizer's script, `skills/nova-forma-value-at-stake-sizer/scripts/value_case.py`: anything that makes it read or write files it should not, run other code, or reach the network.
-- Release zips or plugin manifests that differ from the source in this repository.
+- Plugin or marketplace manifests that install anything other than the skills in this repository.
 - Secrets or personal data committed to this repository by mistake.
 
 ## What does not count

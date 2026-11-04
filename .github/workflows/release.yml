@@ -1,10 +1,12 @@
 name: Release
 
-# Runs when a maintainer pushes a version tag such as v1.0.0. It builds one zip
-# per skill and publishes them on a GitHub release with stable asset names, so
-# https://github.com/Board-of-Innovation/nova-forma-skills/releases/latest/download/<skill-name>.zip
-# always points at the newest version. Releases are immutable once published,
-# so the workflow creates a draft, attaches the zips, and only then publishes.
+# Runs when a maintainer pushes a version tag such as v1.0.0. It checks that the
+# tag matches the version in .claude-plugin/plugin.json, runs the repository
+# checks, and publishes a GitHub release whose notes are the CHANGELOG.md
+# section for that version. The release attaches no files: users install from
+# the repository itself, as a plugin marketplace or with npx skills. Releases
+# are immutable once published, so the release is created and published in one
+# step.
 
 on:
   push:
@@ -19,11 +21,11 @@ concurrency:
 
 jobs:
   release:
-    name: Build the skill zips and publish the release
+    name: Check the version and publish the release
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions:
-      contents: write # create the release and upload its assets
+      contents: write # create the release
     env:
       TAG: ${{ github.ref_name }}
       GH_TOKEN: ${{ github.token }}
@@ -46,9 +48,6 @@ jobs:
       - name: Repository checks
         run: python3 scripts/check.py
 
-      - name: Build the skill zips
-        run: python3 scripts/build_zips.py
-
       - name: Write the release notes from CHANGELOG.md
         run: |
           # The section under "## [X.Y.Z]" up to the next "## " heading,
@@ -67,7 +66,7 @@ jobs:
             echo "::warning::CHANGELOG.md has no section for $VERSION, so the release uses generated notes."
           fi
 
-      - name: Create a draft release, attach the zips, then publish
+      - name: Publish the release
         run: |
           set -euo pipefail
           if [ -n "${NOTES_FILE:-}" ]; then
@@ -81,11 +80,9 @@ jobs:
             kind=(--latest)
           fi
 
-          if [ "$(gh release view "$TAG" --json isDraft --jq .isDraft 2>/dev/null || true)" = "true" ]; then
-            echo "A draft release for $TAG already exists (an earlier run stopped); reusing it."
-          else
-            gh release create "$TAG" --draft --verify-tag --title "Nova Forma skills $TAG" "${notes[@]}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "::error::A release for $TAG already exists, and its tag is locked once published. To ship a correction, release a new patch version. If it is a leftover draft, delete it and run the workflow again."
+            exit 1
           fi
-          gh release upload "$TAG" dist/*.zip --clobber
-          gh release edit "$TAG" --draft=false "${kind[@]}"
-          gh release view "$TAG" --json url,assets --jq '.url, (.assets[].name)'
+          gh release create "$TAG" --verify-tag --title "Nova Forma skills $TAG" "${notes[@]}" "${kind[@]}"
+          gh release view "$TAG" --json url --jq .url
