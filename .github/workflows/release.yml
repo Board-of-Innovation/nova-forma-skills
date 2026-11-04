@@ -81,7 +81,7 @@ jobs:
           fi
 
           if gh release view "$TAG" >/dev/null 2>&1; then
-            echo "::error::A release for $TAG already exists. Published releases cannot change: to correct one, release a new patch version. Delete a leftover draft before you run this again."
+            echo "::error::A release for $TAG already exists, and its tag is locked once published. To ship a correction, release a new patch version. If it is a leftover draft, delete it and run the workflow again."
             exit 1
           fi
           gh release create "$TAG" --verify-tag --title "Nova Forma skills $TAG" "${notes[@]}" "${kind[@]}"

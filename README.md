@@ -93,7 +93,7 @@ An Owner can make the plugin available to the whole organization from **Organiza
 }
 ```
 
-Members don't need access to that repository. [Sync your organization's plugins from a repository](https://claude.com/docs/plugins/org-sync) and [Manage plugins for your organization](https://claude.com/docs/plugins/admin) have the details.
+Members don't need access to that repository. It syncs only when someone pushes to it or an Owner selects **Re-sync** on the **Marketplaces** tab, so select **Re-sync** after each new release of the skills. [Sync your organization's plugins from a repository](https://claude.com/docs/plugins/org-sync) and [Manage plugins for your organization](https://claude.com/docs/plugins/admin) have the details.
 
 Members can also add the marketplace themselves, with the steps above, when **User-created skills** is on under **Organization settings > Plugins & skills > Policy**. Either way, they need **Code execution and file creation** turned on under **Organization settings > Capabilities**.
 
