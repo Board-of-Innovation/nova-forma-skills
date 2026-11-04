@@ -1,25 +1,30 @@
-# Nova Forma skills
+<h1 align="center">
+  <a href="https://novaforma.ai">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset=".github/assets/nova-forma-banner-dark.svg">
+      <img src=".github/assets/nova-forma-banner-light.svg" alt="Nova Forma skills" width="100%">
+    </picture>
+  </a>
+</h1>
 
-Four AI skills that take one workflow from "where do we start with AI?" to a one-page brief for its redesign.
+<p align="center">
+  <b>Four AI skills that take one workflow from "where do we start with AI?" to a one-page brief for its redesign.</b>
+</p>
 
-## What this is
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-B84D16?style=flat-square&labelColor=251913" alt="License: Apache-2.0"></a>
+  <a href="#install"><img src="https://img.shields.io/badge/Claude-plugin-B84D16?style=flat-square&labelColor=251913" alt="Claude plugin"></a>
+  <a href="https://novaforma.ai"><img src="https://img.shields.io/badge/website-novaforma.ai-B84D16?style=flat-square&labelColor=251913" alt="Website: novaforma.ai"></a>
+</p>
 
-Nova Forma is an AI-first redesign of one workflow, done with your team in one week. These four skills are its intake. They prepare one workflow for the redesign week, step by step, in a normal conversation with Claude. At each step Claude asks a few questions, suggests an answer for each and draws on your files where you allow it. You end with a one-page brief.
+Nova Forma is an AI-first redesign of one workflow, done with your team in one week. These four skills are its intake. They prepare one workflow for the redesign week, step by step, in a normal conversation with Claude. You end with a one-page brief.
 
-A skill is a set of written instructions that Claude follows when your request matches it. These skills are plain text files plus one small calculation script. You don't need to write any code.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/four-steps-dark.svg">
+  <img src=".github/assets/four-steps-light.svg" alt="The four steps, run in order. Step 1, Pick the workflow: a ranked shortlist and a scope card. Step 2, Define success: an outcome, its measures and red lines. Step 3, Map today's work: every requirement, owner and exception. Step 4, Size the value: a yearly value range, low to high. The result: a one-page brief for the redesign week." width="100%">
+</picture>
 
 **Who it is for:** teams starting a Nova Forma redesign. Anyone else may use the skills too, free of charge.
-
-## The four steps
-
-Run them in order. Each step builds on the result of the one before.
-
-| Step | Skill | What you get |
-| --- | --- | --- |
-| 1. Pick the workflow | `nova-forma-workflow-identifier` | A ranked shortlist of workflows worth redesigning, your pick, and a scope card that fixes where it starts and ends |
-| 2. Define success | `nova-forma-outcome-statement-writer` | One sentence on who gets what result, with three to six measures and the rules the new way of working may never break |
-| 3. Map today's work | `nova-forma-requirements-lister` | Every requirement the workflow follows today, who owns it and where it shows up, plus the cases that leave the normal path |
-| 4. Size the value | `nova-forma-value-at-stake-sizer` | A value range a year, low to high, with every assumption visible, then the one-page brief for the redesign week |
 
 ## Install
 
@@ -97,6 +102,19 @@ Members also need **Code execution and file creation** turned on under **Organiz
 
 </details>
 
+## The four steps
+
+Run them in order. Each step builds on the result of the one before. At each step Claude asks a few questions, suggests an answer for each and draws on your files where you allow it.
+
+| Step | Skill | What you get |
+| --- | --- | --- |
+| 1. Pick the workflow | `nova-forma-workflow-identifier` | A ranked shortlist of workflows worth redesigning, your pick, and a scope card that fixes where it starts and ends |
+| 2. Define success | `nova-forma-outcome-statement-writer` | One sentence on who gets what result, with three to six measures and the rules the new way of working may never break |
+| 3. Map today's work | `nova-forma-requirements-lister` | Every requirement the workflow follows today, who owns it and where it shows up, plus the cases that leave the normal path |
+| 4. Size the value | `nova-forma-value-at-stake-sizer` | A value range a year, low to high, with every assumption visible, then the one-page brief for the redesign week |
+
+A skill is a set of written instructions that Claude follows when your request matches it. These skills are plain text files plus one small calculation script. You don't need to write any code.
+
 ## What you need
 
 - A paid Claude plan: Pro, Max, Ultra, Team or Enterprise.
@@ -147,7 +165,7 @@ Feedback and fixes are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first: t
 
 The skills are licensed under the [Apache License 2.0](LICENSE): you may use, change and share them, also for commercial work. Keep the license and the [NOTICE](NOTICE) file with any copy, and mark the files you change. Copyright 2026 Board of Innovation BV.
 
-**Names and logos.** The license grants no rights to the Nova Forma or Board of Innovation names or logos (section 6 of the license). You may say that your work is based on the Nova Forma skills. A changed version should carry its own name and should not present itself as the official Nova Forma skills.
+**Names and logos.** The license grants no rights to the Nova Forma or Board of Innovation names or logos (section 6 of the license). The files that show the Nova Forma logo, the banners in [.github/assets](.github/assets) and the plugin icon in [.claude-plugin](.claude-plugin), are not covered by the Apache License 2.0: all rights in them are reserved. You may say that your work is based on the Nova Forma skills. A changed version should carry its own name and should not present itself as the official Nova Forma skills.
 
 **Sources.** The skills cite published research. Those sources belong to their publishers. The license covers this repository's own text and code.
 

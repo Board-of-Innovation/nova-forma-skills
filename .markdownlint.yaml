@@ -13,9 +13,11 @@ MD040: false
 # Changelogs repeat "Added" and "Fixed" under each version.
 MD024:
   siblings_only: true
-# Inline HTML only for collapsible sections and simple layout.
+# Inline HTML only for collapsible sections and simple layout, such as the
+# README's centred banner (an h1 that holds a picture) and badge row.
 MD033:
   allowed_elements:
+    - h1
     - details
     - summary
     - b

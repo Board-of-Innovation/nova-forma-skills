@@ -38,6 +38,7 @@ scripts/
   sync_shared.py        copies shared/references/, LICENSE and NOTICE into every skill
   build_zips.py         builds dist/<skill-name>.zip for uploading one skill to Claude
 .github/                CI workflows, issue and pull request templates, CODEOWNERS, Dependabot
+  assets/               the README banner and four-steps images, light and dark (the logo is not Apache-2.0)
 .claude/                Claude Code settings, path rules and maintainer commands
 ```
 
