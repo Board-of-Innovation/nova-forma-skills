@@ -2,11 +2,12 @@
 # SPDX-License-Identifier: Apache-2.0
 """Copy the shared files into every skill, or check that the copies match.
 
-Every skill must work on its own (a zip upload holds one skill folder), so the
-files that all four skills share live in shared/references/ and are copied,
-never symlinked, into skills/<name>/references/. The root LICENSE and NOTICE
-are copied to skills/<name>/LICENSE.txt and skills/<name>/NOTICE.txt the same
-way, so every zip and install carries both.
+Every skill must work on its own (installers such as npx skills install one
+skill folder and nothing else), so the files that all four skills share live in
+shared/references/ and are copied, never symlinked, into
+skills/<name>/references/. The root LICENSE and NOTICE are copied to
+skills/<name>/LICENSE.txt and skills/<name>/NOTICE.txt the same way, so every
+install carries both.
 
 Usage:
     python3 scripts/sync_shared.py          # write the copies

@@ -4,7 +4,6 @@
     "allow": [
       "Bash(python3 scripts/check.py)",
       "Bash(python3 scripts/sync_shared.py --check)",
-      "Bash(python3 scripts/build_zips.py)",
       "Bash(git status)",
       "Bash(git status *)",
       "Bash(git diff)",

@@ -27,7 +27,7 @@ skills/<skill-name>/     one folder per skill
   LICENSE.txt            a copy of the license, so each skill can travel on its own
   NOTICE.txt             a copy of the NOTICE, for the same reason
 shared/references/       the four files every skill shares
-scripts/                 the check, sync and zip scripts
+scripts/                 the check and sync scripts
 .claude-plugin/          the plugin and marketplace manifests
 AGENTS.md                the guide for AI coding assistants that work on this repository
 ```
@@ -35,7 +35,7 @@ AGENTS.md                the guide for AI coding assistants that work on this re
 - Edit a skill in its own folder under `skills/`. Skill names are fixed: renaming a folder or its `name` breaks existing installs.
 - The four shared files, `context.md`, `display.md`, `evidence.md` and `writing.md`, are the same in every skill. Edit them only in `shared/references/`, then run `python3 scripts/sync_shared.py` to copy them into every skill. Never edit the copies in `skills/*/references/`: the check fails when they drift.
 - The block at the top of each `SKILL.md`, its frontmatter, uses only the six fields of the [Agent Skills specification](https://agentskills.io/specification): `name`, `description`, `license`, `compatibility`, `metadata` and `allowed-tools`. Claude rejects an uploaded skill with any other field.
-- Add no symlinks and no zip files. The release zips are built automatically.
+- Add no symlinks and no zip files.
 - When a change alters what a skill does, add a line under Unreleased in [CHANGELOG.md](CHANGELOG.md). Leave the version as it is: the maintainers change it when they release, as the release steps in [AGENTS.md](AGENTS.md) describe.
 
 Before you open a pull request, run the checks and fix what they report:

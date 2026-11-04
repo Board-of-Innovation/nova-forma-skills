@@ -10,7 +10,6 @@ Run all the checks for this repository, explain every failure in plain words, an
    - `uvx ruff@<RUFF_VERSION> check .` and `uvx ruff@<RUFF_VERSION> format --check .`
    - `npx --yes markdownlint-cli2@<MARKDOWNLINT_CLI2_VERSION>`
    - `HOME="$(mktemp -d)" npx --yes @anthropic-ai/claude-code@<CLAUDE_CODE_VERSION> plugin validate . --strict`
-   - `python3 scripts/build_zips.py`
    - `uv run --no-project --python 3.9 -- python -I skills/nova-forma-value-at-stake-sizer/scripts/value_case.py skills/nova-forma-value-at-stake-sizer/references/example-inputs.json`
 
    When a tool is missing (uv or Node.js), say which one and skip that validator rather than installing anything globally.

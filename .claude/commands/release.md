@@ -1,5 +1,5 @@
 ---
-description: Prepare a release locally (version, CHANGELOG, checks, zips), then stop and hand the maintainer the tag and push commands
+description: Prepare a release locally (version, CHANGELOG, checks), then stop and hand the maintainer the tag and push commands
 argument-hint: "[patch | minor | major | X.Y.Z]"
 disable-model-invocation: true
 ---
@@ -11,7 +11,7 @@ Prepare release `$ARGUMENTS` of the Nova Forma skills. You prepare everything on
 3. **Bump the version everywhere.** Set `version` in `.claude-plugin/plugin.json`, and `metadata.version` (in double quotes) in every `skills/*/SKILL.md`. Nothing else holds the version: `marketplace.json` must not.
 4. **Update the CHANGELOG.** Move everything under `## [Unreleased]` into a new section `## [X.Y.Z] - YYYY-MM-DD` with today's date, and leave an empty `## [Unreleased]` above it. Update the links at the bottom: `[Unreleased]` compares `vX.Y.Z...HEAD`, and `[X.Y.Z]` compares the previous tag with `vX.Y.Z` (for the first release, link to `releases/tag/vX.Y.Z`). When `## [Unreleased]` is empty, stop and ask what the release contains.
 5. **Run every check** the way `/check` does, and fix what fails. A release never goes out with a failing check.
-6. **Build the zips** with `python3 scripts/build_zips.py` and list them with their sizes. When skill content changed since the last release, remind the maintainer to test-upload one zip from `dist/` in Claude (Customize > Skills, then **+**, **Create skill** and **Upload a skill**) before tagging.
+6. **Remind the maintainer to test** when skill content changed since the last release: load the branch with `claude --plugin-dir .` in Claude Code and run one skill before tagging.
 7. **Show the result**: the files you changed and the new CHANGELOG section.
 8. **Stop here.** Give the maintainer these commands with the real version filled in, and explain each line in a few words:
 
@@ -25,4 +25,4 @@ Prepare release `$ARGUMENTS` of the Nova Forma skills. You prepare everything on
    git push origin vX.Y.Z
    ```
 
-   Then explain what happens next: the Release workflow checks that the tag matches `plugin.json`, runs the checks, builds the four zips, creates a draft release with the notes from the CHANGELOG section, attaches the zips and publishes it. The maintainer can follow it under the repository's Actions tab and see the result on its Releases page. A published release cannot be changed: to correct one, release a new patch version.
+   Then explain what happens next: the Release workflow checks that the tag matches `plugin.json`, runs the checks and publishes a release with the notes from the CHANGELOG section. It attaches no files. The maintainer can follow it under the repository's Actions tab and see the result on its Releases page. A published release cannot be changed: to correct one, release a new patch version.
