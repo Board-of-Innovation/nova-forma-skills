@@ -38,7 +38,7 @@ scripts/
   sync_shared.py        copies shared/references/, LICENSE and NOTICE into every skill
   build_zips.py         builds dist/<skill-name>.zip for uploading one skill to Claude
 .github/                CI workflows, issue and pull request templates, CODEOWNERS, Dependabot
-  assets/               the README banner and four-steps images, light and dark (the logo is not Apache-2.0)
+  assets/               the README banner and four-steps images: light, dark and phone (the logo is not Apache-2.0)
 .claude/                Claude Code settings, path rules and maintainer commands
 ```
 
@@ -77,6 +77,7 @@ Each skill reads what the earlier steps produced in the conversation and ends by
 - **Scripts in skills** use only the Python standard library, run on Python 3.9 or later (a Mac's system Python), make no network calls, and are called by a path relative to `SKILL.md`, such as `scripts/value_case.py`.
 - **Python files** start with `# SPDX-License-Identifier: Apache-2.0`, on the second line when the first is a `#!` line.
 - **Write plain English** for business owners and managers who are new to AI, following `shared/references/writing.md`. Use no em or en dashes: use a comma, a colon or a full stop.
+- **README images.** The three four-steps images in `.github/assets/` repeat each step's name and result, with the text drawn as outlines. When a step's name or result changes, redraw all three so they match the table in the README and the image's alt text.
 - **Maintainer helpers for Claude Code** go in `.claude/commands/`, never in `.claude/skills/`, because `npx skills` would offer those to end users.
 
 ## Checks

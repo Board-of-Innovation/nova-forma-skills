@@ -23,6 +23,7 @@ Nova Forma is an AI-first redesign of one workflow, done with your team in one w
 
 <p>
   <picture>
+    <source media="(max-width: 600px)" srcset=".github/assets/four-steps-narrow.svg">
     <source media="(prefers-color-scheme: dark)" srcset=".github/assets/four-steps-dark.svg">
     <img src=".github/assets/four-steps-light.svg" alt="The four steps, run in order. Step 1, Pick the workflow: a ranked shortlist and a scope card. Step 2, Define success: an outcome, its measures and red lines. Step 3, Map today's work: every requirement, owner and exception. Step 4, Size the value: a yearly value range, low to high. The result: a one-page brief for the redesign week." width="100%">
   </picture>
