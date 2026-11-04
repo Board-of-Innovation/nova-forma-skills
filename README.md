@@ -12,19 +12,21 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-B84D16?style=flat-square&labelColor=251913" alt="License: Apache-2.0"></a>
-  <a href="#install"><img src="https://img.shields.io/badge/Claude-plugin-B84D16?style=flat-square&labelColor=251913" alt="Claude plugin"></a>
-  <a href="https://novaforma.ai"><img src="https://img.shields.io/badge/website-novaforma.ai-B84D16?style=flat-square&labelColor=251913" alt="Website: novaforma.ai"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-B84D16?style=flat-square&labelColor=5A1A10" alt="License: Apache-2.0"></a>
+  <a href="#install"><img src="https://img.shields.io/badge/Claude-plugin-B84D16?style=flat-square&labelColor=5A1A10" alt="Claude plugin"></a>
+  <a href="https://novaforma.ai"><img src="https://img.shields.io/badge/website-novaforma.ai-B84D16?style=flat-square&labelColor=5A1A10" alt="Website: novaforma.ai"></a>
 </p>
 
 Nova Forma is an AI-first redesign of one workflow, done with your team in one week. These four skills are its intake. They prepare one workflow for the redesign week, step by step, in a normal conversation with Claude. You end with a one-page brief.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/four-steps-dark.svg">
-  <img src=".github/assets/four-steps-light.svg" alt="The four steps, run in order. Step 1, Pick the workflow: a ranked shortlist and a scope card. Step 2, Define success: an outcome, its measures and red lines. Step 3, Map today's work: every requirement, owner and exception. Step 4, Size the value: a yearly value range, low to high. The result: a one-page brief for the redesign week." width="100%">
-</picture>
-
 **Who it is for:** teams starting a Nova Forma redesign. Anyone else may use the skills too, free of charge.
+
+<p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/four-steps-dark.svg">
+    <img src=".github/assets/four-steps-light.svg" alt="The four steps, run in order. Step 1, Pick the workflow: a ranked shortlist and a scope card. Step 2, Define success: an outcome, its measures and red lines. Step 3, Map today's work: every requirement, owner and exception. Step 4, Size the value: a yearly value range, low to high. The result: a one-page brief for the redesign week." width="100%">
+  </picture>
+</p>
 
 ## Install
 
